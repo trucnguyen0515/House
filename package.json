@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node server/index.js",
+    "dev": "next",
     "build": "next build",
     "start": "next start"
   },
@@ -13,10 +13,14 @@
   "license": "ISC",
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
+    "autoprefixer": "^9.7.4",
     "express": "^4.17.1",
     "next": "^9.2.2",
     "node-sass": "^4.13.1",
+    "postcss-flexbugs-fixes": "^4.2.0",
+    "postcss-preset-env": "^6.7.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0"
-  }
+  },
+  "browserslist": [">0.3%", "not ie 11", "not dead", "not op_mini all"]
 }

@@ -15,7 +15,7 @@ app
         })
         server.listen(port, err => {
             if(err) throw err;
-            console.log(`${port} is running!`)
+            console.log(`Port ${port} is running!`)
         })
     })
     .catch(ex => {

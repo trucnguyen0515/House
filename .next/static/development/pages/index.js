@@ -2211,19 +2211,19 @@ var Index = function Index() {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 7
     },
     __self: this
   }, __jsx(_components_Navbar__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 8
     },
     __self: this
   }), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 9
     },
     __self: this
   }, "index"));
@@ -2233,7 +2233,7 @@ var Index = function Index() {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!*******************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FVolumes%2FData%2FHouse%2Fsrc%2Fpages%2Findex.js ***!
   \*******************************************************************************************************************/
@@ -2256,5 +2256,5 @@ module.exports = dll_82519ec661270f7f484f;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js","styles"]]]);
+},[[1,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map
