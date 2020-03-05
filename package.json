@@ -14,6 +14,7 @@
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
     "autoprefixer": "^9.7.4",
+    "axios": "^0.19.2",
     "express": "^4.17.1",
     "next": "^9.2.2",
     "node-sass": "^4.13.1",
@@ -22,5 +23,10 @@
     "react": "^16.13.0",
     "react-dom": "^16.13.0"
   },
-  "browserslist": [">0.3%", "not ie 11", "not dead", "not op_mini all"]
+  "browserslist": [
+    ">0.3%",
+    "not ie 11",
+    "not dead",
+    "not op_mini all"
+  ]
 }
