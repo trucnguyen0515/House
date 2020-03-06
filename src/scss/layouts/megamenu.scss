@@ -1,0 +1,70 @@
+#MegaMenu{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    .parent{
+        display: flex;
+        justify-content: center;
+    }
+    .item{
+        position: relative;
+        background-color: transparent;
+        padding:10px 30px;
+        border: 1px solid transparent;
+        border-top: 3px solid transparent;
+        border-bottom: 1px solid transparent;
+        cursor: pointer;
+        z-index: 100;
+    }
+    .item span{
+        margin-left:8px;
+        font-weight: 500;
+    }
+    .item5 {
+        span,svg{
+            color: $primaryColor
+        }
+    }
+    .line{
+        position: absolute;
+        width: 100%;
+        bottom: -3px;
+        left: 0;
+        height: 4px;
+        background: white;
+        z-index: 1000;
+    }
+    .menu{
+        display: none;
+        position: absolute;
+        border:1px solid $borderColor;
+        padding: 20px 25px;
+        top:43px;
+        font-size: 14px;
+        background: white;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        .itemMenu{
+            margin-right:50px;
+            min-width: 140px;
+            .title{
+                font-weight: 500;
+                color:$primaryColor;
+            }
+        }
+    }
+    .mylink:hover{
+        text-decoration: underline;
+    }
+    
+}
+
+.hoverMenu{
+    border-color:$borderColor !important;
+    border-top-color:$primaryColor !important;
+    border-bottom: 1px solid white !important;
+    background-color: white !important;
+}
+
+.zIndex{
+    z-index: 1;
+}

@@ -1,0 +1,576 @@
+webpackHotUpdate("static/development/pages/index.js",{
+
+/***/ "./src/components/MegaMenu.js":
+/*!************************************!*\
+  !*** ./src/components/MegaMenu.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return MegaMenu; });
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/parse-int */ "./node_modules/@babel/runtime-corejs2/core-js/parse-int.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
+
+
+
+
+
+
+var _jsxFileName = "/Volumes/Data/House/src/components/MegaMenu.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement;
+
+
+
+
+var data = {
+  1: [{
+    title: 'kitchen & dining',
+    data: ['kitchen', 'dining room', 'pantry', 'great room']
+  }, {
+    title: 'bed & bath',
+    data: ['bath room', 'powder room', 'bedroom', 'baby & kids']
+  }, {
+    title: 'living',
+    data: ['living room', 'family room', 'sunroom', 'home theater']
+  }, {
+    title: 'outdoor',
+    data: ['landscape', 'Patio', 'Deck', 'Pool']
+  }, {
+    title: 'more room',
+    data: ['exterior', 'entry', 'hall', 'home office']
+  }]
+}; // stt la so thu tu cua div 
+
+var alignDivMenu = function alignDivMenu(div, stt) {
+  $(div).find(".menu").css({
+    'display': 'block'
+  });
+
+  if (stt >= 1 && stt <= 3) {
+    var px;
+    px = stt === 1 ? '-1px' : stt === 2 ? '-140px' : stt === 3 ? '-400px' : '0';
+    $(div).find(".menu").css({
+      left: px
+    });
+  }
+
+  if (stt > 3 && stt <= 5) {
+    var _px;
+
+    _px = stt === 5 ? '-1px' : '-120px';
+    $(div).find(".menu").css({
+      right: _px
+    });
+  }
+};
+
+var HoverMenu = function HoverMenu() {
+  $("#MegaMenu .item").hover(function () {
+    $(this).addClass("hoverMenu"); // get stt
+
+    var stt = $(this).attr("class").split(" ")[1];
+    stt = _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_5___default()(stt[stt.length - 1]); // line transparent
+
+    $(this).append("\n            <div class=\"line\"></div>\n        "); //css
+
+    alignDivMenu(this, stt);
+    debugger;
+  }, function () {
+    $("#MegaMenu .line").remove();
+    $(this).removeClass("hoverMenu");
+    $(this).find(".menu").css({
+      'display': 'none'
+    });
+  });
+};
+
+var MegaMenu = /*#__PURE__*/function (_Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(MegaMenu, _Component);
+
+  function MegaMenu() {
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, MegaMenu);
+
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(MegaMenu).apply(this, arguments));
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(MegaMenu, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      HoverMenu();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return __jsx("div", {
+        id: "MegaMenu",
+        className: "container",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 78
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "parent",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 79
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "item item1",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 80
+        },
+        __self: this
+      }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_6__["FontAwesomeIcon"], {
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faPhotoVideo"],
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 81
+        },
+        __self: this
+      }), __jsx("span", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 82
+        },
+        __self: this
+      }, "photos"), __jsx("div", {
+        className: "menu",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 83
+        },
+        __self: this
+      }, __jsx("div", {
+        style: {
+          display: 'flex'
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 84
+        },
+        __self: this
+      }, data[1].map(function (res, j) {
+        return __jsx("div", {
+          key: j,
+          className: "itemMenu",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 88
+          },
+          __self: this
+        }, __jsx("h4", {
+          className: "title mb-10",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 89
+          },
+          __self: this
+        }, res.title), __jsx("ul", {
+          style: {
+            marginBottom: 0,
+            listStyleType: 'none'
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 90
+          },
+          __self: this
+        }, res.data.map(function (res2, i) {
+          return __jsx("p", {
+            key: i,
+            className: "m-0",
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 93
+            },
+            __self: this
+          }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+            href: "/aa",
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 93
+            },
+            __self: this
+          }, __jsx("small", {
+            className: "mylink",
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 93
+            },
+            __self: this
+          }, res2)));
+        })));
+      })))), __jsx("div", {
+        className: "item item2",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 105
+        },
+        __self: this
+      }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_6__["FontAwesomeIcon"], {
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faShoppingBasket"],
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 106
+        },
+        __self: this
+      }), __jsx("span", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 107
+        },
+        __self: this
+      }, "shop by department"), __jsx("div", {
+        className: "menu",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 108
+        },
+        __self: this
+      }, __jsx("div", {
+        style: {
+          display: 'flex'
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 109
+        },
+        __self: this
+      }, data[1].map(function (res, j) {
+        return __jsx("div", {
+          key: j,
+          className: "itemMenu",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 113
+          },
+          __self: this
+        }, __jsx("h4", {
+          className: "title",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 114
+          },
+          __self: this
+        }, res.title), __jsx("ul", {
+          style: {
+            marginBottom: 0,
+            listStyleType: 'none'
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 115
+          },
+          __self: this
+        }, res.data.map(function (res2, i) {
+          return __jsx("p", {
+            key: i,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 118
+            },
+            __self: this
+          }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+            href: "/aa",
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 118
+            },
+            __self: this
+          }, __jsx("small", {
+            className: "mylink",
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 118
+            },
+            __self: this
+          }, res2)));
+        })));
+      })))), __jsx("div", {
+        className: "item item3",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 129
+        },
+        __self: this
+      }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_6__["FontAwesomeIcon"], {
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faUserAstronaut"],
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 130
+        },
+        __self: this
+      }), __jsx("span", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 131
+        },
+        __self: this
+      }, "shop by department"), __jsx("div", {
+        className: "menu",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 132
+        },
+        __self: this
+      }, __jsx("div", {
+        style: {
+          display: 'flex'
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 133
+        },
+        __self: this
+      }, data[1].map(function (res, j) {
+        return __jsx("div", {
+          key: j,
+          className: "itemMenu",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 137
+          },
+          __self: this
+        }, __jsx("h4", {
+          className: "title",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 138
+          },
+          __self: this
+        }, res.title), __jsx("ul", {
+          style: {
+            marginBottom: 0,
+            listStyleType: 'none'
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 139
+          },
+          __self: this
+        }, res.data.map(function (res2, i) {
+          return __jsx("p", {
+            key: i,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 142
+            },
+            __self: this
+          }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+            href: "/aa",
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 142
+            },
+            __self: this
+          }, __jsx("small", {
+            className: "mylink",
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 142
+            },
+            __self: this
+          }, res2)));
+        })));
+      })))), __jsx("div", {
+        className: "item item4",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 153
+        },
+        __self: this
+      }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_6__["FontAwesomeIcon"], {
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faBookReader"],
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 154
+        },
+        __self: this
+      }), __jsx("span", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 155
+        },
+        __self: this
+      }, "stories & advice"), __jsx("div", {
+        className: "menu",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 156
+        },
+        __self: this
+      }, __jsx("div", {
+        style: {
+          display: 'flex'
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 157
+        },
+        __self: this
+      }, data[1].map(function (res, j) {
+        return __jsx("div", {
+          key: j,
+          className: "itemMenu",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 161
+          },
+          __self: this
+        }, __jsx("h4", {
+          className: "title",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 162
+          },
+          __self: this
+        }, res.title), __jsx("ul", {
+          style: {
+            marginBottom: 0,
+            listStyleType: 'none'
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 163
+          },
+          __self: this
+        }, res.data.map(function (res2, i) {
+          return __jsx("p", {
+            key: i,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 166
+            },
+            __self: this
+          }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+            href: "/aa",
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 166
+            },
+            __self: this
+          }, __jsx("small", {
+            className: "mylink",
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 166
+            },
+            __self: this
+          }, res2)));
+        })));
+      })))), __jsx("div", {
+        className: "item item5",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 177
+        },
+        __self: this
+      }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_6__["FontAwesomeIcon"], {
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faGift"],
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 178
+        },
+        __self: this
+      }), __jsx("span", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 179
+        },
+        __self: this
+      }, "SALE"), __jsx("div", {
+        className: "menu",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 180
+        },
+        __self: this
+      }, __jsx("div", {
+        style: {
+          display: 'flex'
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 181
+        },
+        __self: this
+      }, data[1].map(function (res, j) {
+        return __jsx("div", {
+          key: j,
+          className: "itemMenu",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 185
+          },
+          __self: this
+        }, __jsx("h4", {
+          className: "title",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 186
+          },
+          __self: this
+        }, res.title), __jsx("ul", {
+          style: {
+            marginBottom: 0,
+            listStyleType: 'none'
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 187
+          },
+          __self: this
+        }, res.data.map(function (res2, i) {
+          return __jsx("p", {
+            key: i,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 190
+            },
+            __self: this
+          }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+            href: "/aa",
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 190
+            },
+            __self: this
+          }, __jsx("small", {
+            className: "mylink",
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 190
+            },
+            __self: this
+          }, res2)));
+        })));
+      }))))));
+    }
+  }]);
+
+  return MegaMenu;
+}(react__WEBPACK_IMPORTED_MODULE_9__["Component"]);
+
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+
+/***/ })
+
+})
+//# sourceMappingURL=index.js.64a2b863f8d573992b08.hot-update.js.map

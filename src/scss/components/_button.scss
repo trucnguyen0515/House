@@ -1,0 +1,15 @@
+.my-btn{
+    height: 52px;
+    font-size: 18px;
+    line-height: 1;
+    padding: 15px 50px;
+    min-width: 100px;
+    background: $primaryColor;
+    border:1px solid $primaryColor;
+    color:white;
+    cursor: pointer;
+    &:hover{
+        background: $primaryColorHover;
+        border:1px solid $primaryColorHover;
+    }
+}

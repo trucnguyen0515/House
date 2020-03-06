@@ -1,0 +1,43 @@
+@import './abstracts/initial';
+body{
+    font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333333;
+    line-height: 1.42857143;
+    font-size: 15px;
+}
+h1,h2,h3,h4,h5,h6,span,ul,li,img{
+    padding:0;
+    margin:0;
+}
+.container{
+    margin-right: auto;
+    margin-left: auto;
+    width: 1000px;
+}
+@media (min-width: 1280px){
+    .container{
+        width: 1200px;
+    }
+}
+
+
+
+@import './abstracts/variable';
+@import './abstracts/minxin';
+@import './abstracts/extend';
+
+//libs
+
+// Pages
+@import './pages/index';
+
+// Layouts
+@import './layouts/header';
+@import './layouts/megamenu';
+
+// Components
+@import './components/button'
+
+
+
+
