@@ -2624,6 +2624,7 @@ class MegaMenu extends react__WEBPACK_IMPORTED_MODULE_3__["Component"] {
       },
       __self: this
     }), __jsx("span", {
+      className: "nameMenu",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 82
@@ -2674,7 +2675,7 @@ class MegaMenu extends react__WEBPACK_IMPORTED_MODULE_3__["Component"] {
       }, res.data.map((res2, i) => {
         return __jsx("p", {
           key: i,
-          className: "m-0",
+          className: "m-0 mylink",
           __source: {
             fileName: _jsxFileName,
             lineNumber: 93
@@ -2688,7 +2689,7 @@ class MegaMenu extends react__WEBPACK_IMPORTED_MODULE_3__["Component"] {
           },
           __self: this
         }, __jsx("small", {
-          className: "mylink",
+          className: "",
           __source: {
             fileName: _jsxFileName,
             lineNumber: 93
@@ -2711,6 +2712,7 @@ class MegaMenu extends react__WEBPACK_IMPORTED_MODULE_3__["Component"] {
       },
       __self: this
     }), __jsx("span", {
+      className: "nameMenu",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 107
@@ -2798,6 +2800,7 @@ class MegaMenu extends react__WEBPACK_IMPORTED_MODULE_3__["Component"] {
       },
       __self: this
     }), __jsx("span", {
+      className: "nameMenu",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 132
@@ -2885,6 +2888,7 @@ class MegaMenu extends react__WEBPACK_IMPORTED_MODULE_3__["Component"] {
       },
       __self: this
     }), __jsx("span", {
+      className: "nameMenu",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 157
@@ -2972,6 +2976,7 @@ class MegaMenu extends react__WEBPACK_IMPORTED_MODULE_3__["Component"] {
       },
       __self: this
     }), __jsx("span", {
+      className: "nameMenu",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 182
@@ -3120,15 +3125,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_IndexPage_Carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/IndexPage/Carousel */ "./src/components/IndexPage/Carousel.js");
 /* harmony import */ var _layouts_layout1__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../layouts/layout1 */ "./src/layouts/layout1.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! jquery */ "jquery");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _scss_index_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../scss/index.scss */ "./src/scss/index.scss");
-/* harmony import */ var _scss_index_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_scss_index_scss__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var antd_dist_antd_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! antd/dist/antd.css */ "./node_modules/antd/dist/antd.css");
-/* harmony import */ var antd_dist_antd_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(antd_dist_antd_css__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _components_IndexPage_Introduce__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/IndexPage/Introduce */ "./src/components/IndexPage/Introduce.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! jquery */ "jquery");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _scss_index_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../scss/index.scss */ "./src/scss/index.scss");
+/* harmony import */ var _scss_index_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_scss_index_scss__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var antd_dist_antd_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! antd/dist/antd.css */ "./node_modules/antd/dist/antd.css");
+/* harmony import */ var antd_dist_antd_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(antd_dist_antd_css__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_IndexPage_Introduce__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/IndexPage/Introduce */ "./src/components/IndexPage/Introduce.js");
 var _jsxFileName = "/Volumes/Data/House/src/pages/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -3141,47 +3149,47 @@ class IndexPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     return __jsx(_layouts_layout1__WEBPACK_IMPORTED_MODULE_2__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15
+        lineNumber: 16
       },
       __self: this
     }, __jsx("div", {
       id: "indexPage",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 16
+        lineNumber: 17
       },
       __self: this
     }, __jsx(_components_IndexPage_Carousel__WEBPACK_IMPORTED_MODULE_1__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 17
+        lineNumber: 18
       },
       __self: this
     }), __jsx("div", {
       className: "container pt-10 pb-40",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 18
+        lineNumber: 19
       },
       __self: this
-    }, __jsx(_components_IndexPage_Introduce__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    }, __jsx(_components_IndexPage_Introduce__WEBPACK_IMPORTED_MODULE_7__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 19
+        lineNumber: 20
       },
       __self: this
     }), __jsx("div", {
       className: "text-center mt-50",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20
+        lineNumber: 21
       },
       __self: this
     }, __jsx("button", {
       className: "my-btn",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21
+        lineNumber: 22
       },
       __self: this
     }, "Get Started")))));

@@ -303,6 +303,44 @@ template {
 [hidden] {
   display: none; }
 
+body {
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333333;
+  line-height: 1.42857143;
+  font-size: 15px; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+ul,
+li,
+img {
+  padding: 0;
+  margin: 0; }
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  width: 1000px; }
+
+@media (min-width: 1280px) {
+  .container {
+    width: 1200px; } }
+
+.mylink {
+  cursor: pointer;
+  font-size: 14px; }
+
+.mylink::first-letter {
+  text-transform: uppercase; }
+
+.mylink:hover {
+  text-decoration: underline; }
+
 .d-block {
   display: block; }
 
@@ -3342,24 +3380,12 @@ template {
 .m-100 {
   margin: 100px; }
 
-body {
-  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333333;
-  line-height: 1.42857143;
-  font-size: 15px; }
+.ant-row {
+  margin: 0 -10px; }
 
-h1, h2, h3, h4, h5, h6, span, ul, li, img {
-  padding: 0;
-  margin: 0; }
-
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  width: 1000px; }
-
-@media (min-width: 1280px) {
-  .container {
-    width: 1200px; } }
+.ant-col {
+  padding: 0 10px;
+  margin-top: 30px; }
 
 #indexPage {
   background: #f4f4f4; }
@@ -3470,6 +3496,37 @@ h1, h2, h3, h4, h5, h6, span, ul, li, img {
 #Introduce .des {
   font-size: 15px;
   font-weight: 300; }
+
+#indexProduct {
+  border-top: 1px solid #ddd;
+  padding-bottom: 20px; }
+  #indexProduct .categories {
+    overflow-y: scroll;
+    height: 100%; }
+    #indexProduct .categories h3 {
+      position: relative; }
+      #indexProduct .categories h3::before {
+        position: absolute;
+        content: '';
+        width: 150px;
+        height: 1px;
+        background-color: #ddd;
+        top: 30px;
+        left: 0px; }
+  #indexProduct .product {
+    position: relative; }
+  #indexProduct img {
+    width: 100%;
+    height: 200px; }
+  #indexProduct .img img {
+    width: 100%;
+    height: 250px; }
+  #indexProduct .title {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 1rem;
+    font-weight: 500; }
 
 header {
   height: 60px; }
@@ -3651,8 +3708,7 @@ header {
 
 #MegaMenu {
   display: flex;
-  justify-content: center;
-  text-transform: uppercase; }
+  justify-content: center; }
   #MegaMenu .parent {
     display: flex;
     justify-content: center; }
@@ -3665,6 +3721,11 @@ header {
     border-bottom: 1px solid transparent;
     cursor: pointer;
     z-index: 100; }
+  #MegaMenu .item svg {
+    color: black; }
+  #MegaMenu .nameMenu {
+    color: black;
+    text-transform: uppercase; }
   #MegaMenu .item span {
     margin-left: 8px;
     font-weight: 500; }
@@ -3692,9 +3753,8 @@ header {
       min-width: 140px; }
       #MegaMenu .menu .itemMenu .title {
         font-weight: 500;
-        color: #4dbc15; }
-  #MegaMenu .mylink:hover {
-    text-decoration: underline; }
+        color: #4dbc15;
+        text-transform: uppercase; }
 
 .hoverMenu {
   border-color: #ddd !important;

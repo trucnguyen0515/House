@@ -79,7 +79,7 @@ export default class MegaMenu extends Component {
                 <div className="parent">
                     <div className="item item1">
                         <FontAwesomeIcon icon={faPhotoVideo} />
-                        <span>photos</span>
+                        <span className="nameMenu">photos</span>
                         <div className="menu">
                             <div style={{display:'flex'}}>
                                 {
@@ -90,7 +90,7 @@ export default class MegaMenu extends Component {
                                                 <ul style={{marginBottom:0,listStyleType:'none'}}>
                                                     {
                                                         res.data.map((res2,i) => {
-                                                            return <p key={i} className="m-0"><Link  href="/aa"><small className="mylink">{res2}</small></Link></p>
+                                                            return <p key={i} className="m-0 mylink"><Link  href="/aa"><small className="">{res2}</small></Link></p>
                                                         })
                                                     }
                                                 </ul>
@@ -104,7 +104,7 @@ export default class MegaMenu extends Component {
                     </div>
                     <div className="item item2">
                         <FontAwesomeIcon icon={faShoppingBasket} />
-                        <span>shop by department</span>
+                        <span className="nameMenu">shop by department</span>
                         <div className="menu">
                             <div style={{display:'flex'}}>
                                 {
@@ -129,7 +129,7 @@ export default class MegaMenu extends Component {
                     </div>
                     <div className="item item3">
                         <FontAwesomeIcon icon={faUserAstronaut} />
-                        <span>shop by department</span>
+                        <span className="nameMenu">shop by department</span>
                         <div className="menu">
                             <div style={{display:'flex'}}>
                                 {
@@ -154,7 +154,7 @@ export default class MegaMenu extends Component {
                     </div>
                     <div className="item item4">
                         <FontAwesomeIcon icon={faBookReader} />
-                        <span>stories & advice</span>
+                        <span className="nameMenu">stories & advice</span>
                         <div className="menu">
                             <div style={{display:'flex'}}>
                                 {
@@ -179,7 +179,7 @@ export default class MegaMenu extends Component {
                     </div>
                     <div className="item item5">
                         <FontAwesomeIcon icon={faGift} />
-                        <span>SALE</span>
+                        <span className="nameMenu">SALE</span>
                         <div className="menu">
                             <div style={{display:'flex'}}>
                                 {

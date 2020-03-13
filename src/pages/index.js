@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from "react";
 import CarouselComp from "../components/IndexPage/Carousel";
-
 import Layout1 from "../layouts/layout1";
+import Link from "next/link";
+
 
 import 'jquery';
 import "../scss/index.scss";

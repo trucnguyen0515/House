@@ -15,7 +15,7 @@ class MyDocument extends Document {
                 */}
                 <MyHead>
                     <title>House</title>
-                    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                    {/* <meta name="viewport" content="width=device-width, initial-scale=1.0" /> */}
                     <style rel="stylesheet" href="https://st.hzcdn.com/res/4166/css/style?f=webfonts,houzz-bootstrap,houzzTheme,iconfont,iconGlyphs,houzz-responsive-1425px,ui,ui_wk"></style>
                 </MyHead>
 
