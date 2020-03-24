@@ -1,243 +1,149 @@
-import Layout1 from "../../layouts/layout1";
+
+
+// import "jquery";
+import "antd/dist/antd.css";
+import "../../scss/pages/products.scss";
+
+
 import { Component } from "react";
 import { Row, Col, Carousel } from "antd";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { dataCategory, dataCategories } from "../../data/data";
 
-import 'jquery';
-import "../../scss/index.scss";
-import "antd/dist/antd.css";
+import MyRouter from "../../const/routes";
 
 
-const data = [
-    {
-        id: 1,
-        name: 'Furniture',
-        url: 'cate1.jpg',
-        data: [
-            {
-                id: 1,
-                name: 'Living Room Furniture'
-            },
-            {
-                id: 2,
-                name: 'Kitchen & Dining Furniture'
-            },
-            {
-                id: 3,
-                name: 'Bedroom Furniture'
-            },
-            {
-                id: 4,
-                name: 'Bedroom Furniture'
-            },
-            {
-                id: 5,
-                name: 'Home Office Furniture'
-            }]
-    },
-    {
-        id: 2,
-        name: 'Kitchen & Dining',
-        url: 'cate2.jpg',
-        data: [
-            {
-                id: 1,
-                name: 'Kitchen & Dining Furniture'
-            },
-            {
-                id: 2,
-                name: 'Kitchen Fixtures'
-            },
-            {
-                id: 3,
-                name: 'Tile'
-            },
-            {
-                id: 4,
-                name: 'Kitchen Storage & Organization'
-            },
-            {
-                id: 5,
-                name: 'Tabletop'
-            }
-        ]
-    },
-    {
-        id: 3,
-        name: 'Bath',
-        url: 'cate3.jpg',
-        data: [
-            {
-                id: 1,
-                name: 'Bathroom Vanities'
-            },
-            {
-                id: 2,
-                name: 'Bathroom Vanity Lighting'
-            },
-            {
-                id: 3,
-                name: 'Tile'
-            },
-            {
-                id: 4,
-                name: 'Showers'
-            },
-            {
-                id: 5,
-                name: 'Bathtubs'
-            }
-        ]
-    },
-    {
-        id: 1,
-        name: 'Furniture',
-        url: 'cate1.jpg',
-        data: [
-            {
-                id: 1,
-                name: 'Living Room Furniture'
-            },
-            {
-                id: 2,
-                name: 'Kitchen & Dining Furniture'
-            },
-            {
-                id: 3,
-                name: 'Bedroom Furniture'
-            },
-            {
-                id: 4,
-                name: 'Bedroom Furniture'
-            },
-            {
-                id: 5,
-                name: 'Home Office Furniture'
-            }]
-    },
-    {
-        id: 2,
-        name: 'Kitchen & Dining',
-        url: 'cate2.jpg',
-        data: [
-            {
-                id: 1,
-                name: 'Kitchen & Dining Furniture'
-            },
-            {
-                id: 2,
-                name: 'Kitchen Fixtures'
-            },
-            {
-                id: 3,
-                name: 'Tile'
-            },
-            {
-                id: 4,
-                name: 'Kitchen Storage & Organization'
-            },
-            {
-                id: 5,
-                name: 'Tabletop'
-            }
-        ]
-    },
-    {
-        id: 3,
-        name: 'Bath',
-        url: 'cate3.jpg',
-        data: [
-            {
-                id: 1,
-                name: 'Bathroom Vanities'
-            },
-            {
-                id: 2,
-                name: 'Bathroom Vanity Lighting'
-            },
-            {
-                id: 3,
-                name: 'Tile'
-            },
-            {
-                id: 4,
-                name: 'Showers'
-            },
-            {
-                id: 5,
-                name: 'Bathtubs'
-            }
-        ]
-    },
-]
+import Layout1 from "../../layouts/layout1";
+import LoadingPage from "../../components/SharedComp/LoadingPage";
+
 
 class ProductPage extends Component {
+  state = {
+    loading: false
+  };
 
-    renderProducts = () => {
-        return data.map((res, i) => {
-            return (
-                <Col span={8} key={i}>
-                    <div className="product">
-                        <img src={`/images/${res.url}`} />
-                        <span className="title mylink">{res.name}</span>
-                        <div className="list mt-20">
-                            {
-                                res.data.map((res2, i2) => {
-                                    return (i2 + 1 < res.data.length) ?
-                                        <p key={i2} className="mylink mb-5">{res2.name}</p> :
-                                        <div key={i2}>
-                                            <p className="mylink mb-5">{res2.name}</p>
-                                            <p className="mylink mb-5" style={{ fontWeight: 'bold' }}>Show All {res.name} <FontAwesomeIcon className="ml-5" icon={faChevronRight} /></p>
-                                        </div>
-                                })}
-                        </div>
-                    </div>
-                </Col>
-            )
-        })
-    }
-    renderCategories = () => {
-        return data.map((res, i) => {
-            return (
-                <p key={i} className="mylink mb-5">{res.name}</p>
-            )
-        })
-    }
+  arrLengthThan0 = []
 
-    render() {
-        const products = this.renderProducts();
-        const categories = this.renderCategories();
-
+  renderCategories = () => {
+    return dataCategories.map((res, i) => {
+      if (res.parent.length === 0) {
         return (
-            <Layout1>
-                <div id="indexProduct">
-                    <div className="container">
-                        <Row>
-                            <Col span={6} style={{ marginTop: '20px'}}>
-                                <div className="categories">
-                                    <h3 className="text-bold mb-20">Categories</h3>
-                                    {categories}
-                                </div>
-                            </Col>
-                            <Col span={18} style={{marginTop:0}}>
-                                <Carousel autoplay>
-                                    <div className="img">
-                                        <img src="/images/banner1.jpg" alt="house1" />
-                                    </div>
-                                    <div className="img">
-                                        <img src="/images/banner2.jpg" alt="house1" />
-                                    </div>
-                                </Carousel>
-                            </Col>
-                            {products}
-                        </Row>
-                    </div>
-                </div>
-            </Layout1>
+          <Link
+            key={i}
+            href={MyRouter.ProductDetail.href}
+            as={MyRouter.ProductDetail.as(res.slug)}
+          >
+            <p className="mylink mb-5" onClick={() => this.setState({ loading: true })}>{res.name}</p>
+          </Link>
         )
+      }
+    });
+  };
+  renderProducts_child = (parr) => {
+    let SoLuongSPMuonHienThi = 4
+    let itemsChild = [];
+    let i = 0;
+    for(let res of dataCategories){
+      if(res.parent.length > 0){
+        for(let res2 of res.parent){
+          if(res2 === parr.id && i < SoLuongSPMuonHienThi){
+            itemsChild.push(res);
+            i++;
+          }
+        }
+      }
     }
+    return itemsChild.map((res, i) => {
+        return itemsChild.length - 1 === i ? (
+          <div key={i}>
+            <Link href={`${MyRouter.ProductDetail.href}`} as={`${MyRouter.ProductDetail.as(res.slug)}`}>
+              <p className="mylink mb-5" onClick={() => this.setState({ loading: true })}>{res.name}</p>
+            </Link>
+            <Link href={`${MyRouter.ProductDetail.href}`} as={`${MyRouter.ProductDetail.as(parr.slug)}`}>
+            <p className="mylink mb-5" style={{ fontWeight: "bold" }}>
+              Show All {parr.name}{" "}
+              <FontAwesomeIcon className="ml-5" icon={faChevronRight} />
+            </p>
+            </Link>
+          </div>
+        ) : (
+          <Link key={i} href={`${MyRouter.ProductDetail.href}`} as={`${MyRouter.ProductDetail.as(res.slug)}`}>
+            <p  className="mylink mb-5" onClick={() => this.setState({ loading: true })}>
+              {res.name}
+            </p>
+          </Link>
+        )
+      })
+  }
+  renderProducts = () => {
+    this.arrLengthThan0 = [];
+    return dataCategories.map((res, i) => {
+      if (res.parent.length === 0) {
+        return (
+          <Col span={8} key={i}>
+            <div className="product">
+              <Link
+                href={MyRouter.ProductDetail.href}
+                as={MyRouter.ProductDetail.as(res.slug)}
+              >
+                <img src={`/images/${res.url}`} onClick={() => this.setState({ loading: true })} />
+              </Link>
+              <Link
+                href={MyRouter.ProductDetail.href}
+                as={MyRouter.ProductDetail.as(res.slug)}
+              >
+                <span className="title mylink" onClick={() => this.setState({ loading: true })}>{res.name}</span>
+              </Link>
+              <div className="list mt-10">
+                {
+                 this.renderProducts_child(res)
+                }
+              </div>
+            </div>
+          </Col>
+        );
+      }
+      this.arrLengthThan0.push(res)
+    });
+  };
 
+
+  render() {
+    const categories = this.renderCategories();
+    const products = this.renderProducts();
+
+    return (
+      <Layout1>
+        <LoadingPage isLoading={this.state.loading}>
+          <div id="indexProduct">
+            <div className="container">
+              <Row>
+                <Col span={6} style={{ marginTop: "20px" }}>
+                  <div className="categories">
+                    <h3 className="text-bold mb-20">Categories</h3>
+                    {categories}
+                  </div>
+                </Col>
+                <Col span={18} style={{ marginTop: 0 }}>
+                  <Carousel autoplay>
+                    <div className="img">
+                      <img src="/images/banner1.jpg" alt="house1" />
+                    </div>
+                    <div className="img">
+                      <img src="/images/banner2.jpg" alt="house1" />
+                    </div>
+                  </Carousel>
+                </Col>
+                {products}
+              </Row>
+            </div>
+          </div>
+        </LoadingPage>
+      </Layout1>
+    );
+  }
 }
 
 export default ProductPage;

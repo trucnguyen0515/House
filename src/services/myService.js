@@ -1,6 +1,22 @@
-class MyService {
+export class MyService {
+
+  static parseSeoToName(string = ""){
+    const mstr = string.split("-");
+    let res = "";
+    let firsLetter = "";
+    if(mstr.length > 1){
+      for(let item of mstr){
+        firsLetter = item[0].toUpperCase();
+        res += res === "" ? firsLetter+item.substring(1) : " " + firsLetter+item.substring(1)
+      }
+      return res
+    } 
+    firsLetter = mstr[0][0].toUpperCase();
+    return firsLetter+mstr[0].substring(1)
+  }
+
   //  loai bo phan tu trung trong arr obj
-  dedup(arr) {
+  static dedup(arr) {
     var hashTable = {};
     return arr.filter(function(el) {
       var key = JSON.stringify(el);
@@ -10,7 +26,7 @@ class MyService {
   }
   // order array object
   // arr.sort(orderArrayObject('title','desc',0))
-  orderArrayObject(props, order = "asc", isDate = 0) {
+  static orderArrayObject(props, order = "asc", isDate = 0) {
     return function(a, b) {
       if (!a.hasOwnProperty(props) || !b.hasOwnProperty(props)) {
         return 0;
@@ -33,7 +49,7 @@ class MyService {
     };
   }
   // nguyen-tan-truc
-  getSeoTitle(input) {
+  static getSeoTitle(input) {
     if (input == undefined || input == "") return "";
     //Đổi chữ hoa thành chữ thường
     var slug = input.toLowerCase();
@@ -64,7 +80,7 @@ class MyService {
     return slug;
   }
   // 14.000.000
-  dotsNumber(value) {
+  static dotsNumber(value) {
     if (value) {
       let string = this.replaceAll(value, ".", "");
       let arr = "";
@@ -81,7 +97,7 @@ class MyService {
     }
   }
   // replace string multiple
-  replaceAll(str, find, replace) {
+  static replaceAll(str, find, replace) {
     if (str) {
       return typeof str !== "string"
         ? str
@@ -90,11 +106,11 @@ class MyService {
         : str.replace(new RegExp(this.escapeRegExp(find), "g"), replace);
     }
   }
-  escapeRegExp(str) {
+  static escapeRegExp(str) {
     return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
   }
   // Parse JWT
-  parseJwt(token) {
+  static parseJwt(token) {
     var base64Url = token.split(".")[1];
     var base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
     var jsonPayload = decodeURIComponent(
@@ -108,7 +124,7 @@ class MyService {
     return JSON.parse(jsonPayload);
   }
   //Convert exel to json
-  parseExcel(file, callback) {
+  static parseExcel(file, callback) {
     var reader = new FileReader();
 
     reader.onload = function(e) {
@@ -129,7 +145,7 @@ class MyService {
     reader.readAsBinaryString(file);
   }
   //parse model excel
-  parseModelExcel(arrExcel) {
+  static parseModelExcel(arrExcel) {
     let mangDSKQ = new DanhSachKhachHang();
     for (let val of arrExcel) {
       const obj = Object.entries(val).reduce((acc, [key, value]) => {
@@ -205,7 +221,7 @@ class MyService {
     format : dd/mm/yyyy , mm-dd-yyyy
     hastime: 0 => no , 1 => yes
 */
-  formatDayTimeNow(date, format, hastime) {
+  staticformatDayTimeNow(date, format, hastime) {
     let mytime = "";
     let time = "";
     let d = date ? new Date(date) : new Date(),
@@ -235,14 +251,14 @@ class MyService {
     return mytime;
   }
   // number: count day add
-  addDay(number) {
+  static addDay(number) {
     let date = new Date();
     let timeStamp = date.setDate(date.getDate() + parseInt(number));
     date = new Date(timeStamp);
     return formatDayTimeNow(date, "dd/mm/yyyy", 0);
   }
   // vd: 15/05/1994 12:00:00
-  formatDefaultDayTime(stringDate) {
+  static formatDefaultDayTime(stringDate) {
     let date, month, year, daySplit;
     daySplit = stringDate.split(" ");
     date = daySplit[0].split(stringDate[2])[0];
@@ -253,7 +269,7 @@ class MyService {
       : [month, date, year].join("-");
   }
   // Image
-  getBase64(file) {
+  static getBase64(file) {
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
       reader.readAsDataURL(file);
@@ -261,7 +277,7 @@ class MyService {
       reader.onerror = error => reject(error);
     });
   }
-  srcToFile(src, fileName, mimeType) {
+  static srcToFile(src, fileName, mimeType) {
     return fetch(src)
       .then(function(res) {
         return res.arrayBuffer();
@@ -271,3 +287,37 @@ class MyService {
       });
   }
 }
+
+export class FuncService {
+  // tim duy nhat 1 item
+  /*
+      arr: input arrObj dau vao
+      prop: get tra tri prop can tim
+      string: string can tim
+  */
+  static search(arr,prop,string){
+    return arr.find(res => res[prop] === string)
+  }
+  // tim tat ca item theo danh sach id
+  /*
+      arr: input arrObj dau vao
+      arrFind: input arr can tim vd:["a","b"]
+      prop: get tra tri prop can tim
+  */
+  static find(arr,arrFind,prop){
+    let newArr = []
+    let myMap = new Map();
+    if(arrFind.length > 0){
+      for(let val of arr){
+        myMap.set(val[prop],val)
+      }
+      for(let val of arrFind){
+        newArr.push(myMap.get(val));
+      }
+      return newArr;
+    }
+    return null
+  }
+}
+
+

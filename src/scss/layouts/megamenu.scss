@@ -1,6 +1,7 @@
 #MegaMenu{
     display: flex;
     justify-content: center;
+    border-bottom: 1px solid $borderColor;
     .parent{
         display: flex;
         justify-content: center;

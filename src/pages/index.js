@@ -1,14 +1,22 @@
+
+
+
+// import 'jquery';
+import "antd/dist/antd.css";
+import "../scss/pages/index.scss";
+
 import React, { Component, Fragment } from "react";
 import CarouselComp from "../components/IndexPage/Carousel";
 import Layout1 from "../layouts/layout1";
 import Link from "next/link";
 
 
-import 'jquery';
-import "../scss/index.scss";
-import "antd/dist/antd.css";
 import Introduce from "../components/IndexPage/Introduce";
+import MyRouter from "../const/routes";
 
+export async function getStaticProps({ params }) {
+    return {props:{a:'ok'}}
+}
 
 export default class IndexPage extends Component {
     render() {
@@ -19,12 +27,13 @@ export default class IndexPage extends Component {
                     <div className="container pt-10 pb-40">
                         <Introduce/>
                         <div className="text-center mt-50">
-                            <button className="my-btn">Get Started</button>
+                            <Link href={MyRouter.Products.href}>
+                                <button className="my-btn">Get Started</button>
+                            </Link>
                         </div>
                     </div>
                  </div>
             </Layout1>
-
         );
     }
 }

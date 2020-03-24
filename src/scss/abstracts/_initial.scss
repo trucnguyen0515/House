@@ -401,6 +401,12 @@ img {
 }
 
 // text
+.font-bold{
+  font-weight: 500;
+}
+.d-flex{
+  display: flex;
+}
 .d-block {
   display: block;
 }
@@ -409,6 +415,16 @@ img {
 }
 .text-center {
   text-align: center;
+}
+@for $i from 1 through 100 {
+  .w-#{$i}{
+    width: calc(#{$i} * 100%);
+  }
+}
+@for $i from 13 through 30 {
+  .fs-#{$i}{
+    font-size: #{$i}px;
+  }
 }
 @for $i from 0 through 100 {
   .pt-#{$i} {

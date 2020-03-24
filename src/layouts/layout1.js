@@ -1,7 +1,7 @@
 import { Fragment } from "react";
-import Header from "../components/Header";
-import MegaMenu from "../components/MegaMenu";
-import Footer from "../components/Footer";
+import Header from "./layout1Comp/Header";
+import MegaMenu from "./layout1Comp/MegaMenu";
+import Footer from "./layout1Comp/Footer";
 
 const Layout1 = (props) => {
     return (
