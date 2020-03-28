@@ -3,8 +3,31 @@
 }
 .ant-col{
     padding:0 10px;
-    margin-top:30px;
+    // margin-top:30px;
 }
 .ant-breadcrumb{
     padding: 15px 0 20px 0 !important;
+}
+.ant-rate-star:not(:last-child){
+    margin-right: 3px;
+    color:#ffbe28
+}
+.anticon-star svg{
+    font-size: 14px;
+}
+.ant-input-number-input,.ant-input-number-input-wrap{
+    height:100%;
+}
+.ant-collapse > .ant-collapse-item > .ant-collapse-header{
+    background-color: white;
+}
+.ant-collapse{
+    border:none
+}
+.ant-collapse > .ant-collapse-item{
+    border-bottom: none;
+    border-top: 1px solid #d9d9d9;
+}
+.ant-collapse-item:last-of-type{
+    border-bottom: 1px solid #d9d9d9;
 }

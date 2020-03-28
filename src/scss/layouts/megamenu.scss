@@ -2,6 +2,9 @@
     display: flex;
     justify-content: center;
     border-bottom: 1px solid $borderColor;
+    background:white;
+    border-top:none;
+
     .parent{
         display: flex;
         justify-content: center;

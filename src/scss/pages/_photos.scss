@@ -1,0 +1,18 @@
+#PhotoPage{
+    .infoCategoryPhoto{
+        .itemCate{
+            box-shadow: 0 2px 4px 1px rgba(0,0,0,.12);
+            transition: box-shadow 0.3s;
+            cursor: pointer;
+            &:hover{
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,.24);
+            }
+        }
+        background-color: white;
+    }
+    .listCategoryPhoto{
+        .PhotoDetails{
+            cursor: zoom-in;
+        }
+    }
+}

@@ -363,6 +363,7 @@ body {
   color: #333333;
   line-height: 1.42857143;
   font-size: 15px;
+  background:#f4f4f4;
 }
 h1,
 h2,
@@ -389,6 +390,13 @@ img {
 }
 
 // link
+.card{
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.16);
+  cursor: pointer;
+  &:hover{
+    box-shadow: 0 4px 8px rgba(0,0,0,.16);
+  }
+}
 .mylink{
   cursor: pointer;
   font-size: 14px;
@@ -401,6 +409,9 @@ img {
 }
 
 // text
+.primaryColor{
+  color: $primaryColor
+}
 .font-bold{
   font-weight: 500;
 }

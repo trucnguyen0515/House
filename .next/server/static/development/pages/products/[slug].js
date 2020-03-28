@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -199,17 +199,6 @@ function _typeof(obj) {
 }
 
 module.exports = _typeof;
-
-/***/ }),
-
-/***/ "./node_modules/antd/dist/antd.css":
-/*!*****************************************!*\
-  !*** ./node_modules/antd/dist/antd.css ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
 
 /***/ }),
 
@@ -1813,6 +1802,986 @@ function SvgHouzzLogo(props) {
 
 /***/ }),
 
+/***/ "./src/components/ProductPage/categoryComp.js":
+/*!****************************************************!*\
+  !*** ./src/components/ProductPage/categoryComp.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd */ "antd");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "@fortawesome/react-fontawesome");
+/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "@fortawesome/free-solid-svg-icons");
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _const_routes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../const/routes */ "./src/const/routes.js");
+/* harmony import */ var _services_myService__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../services/myService */ "./src/services/myService.js");
+var _jsxFileName = "/Volumes/Data/House/src/components/ProductPage/categoryComp.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
+
+
+
+const CateComp1 = ({
+  SoLuongHienThiToiDa,
+  TenHienThiToiDa,
+  categoriesChild,
+  categoriesChild_2,
+  callback
+}) => {
+  let count = 0;
+  return __jsx("div", {
+    style: {
+      background: 'white'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: undefined
+  }, categoriesChild.map((res, i) => {
+    const categoriesChild_2_filter = categoriesChild_2.filter(val => {
+      let kq = val.parent.filter(x => {
+        if (x === res.id && count < SoLuongHienThiToiDa + TenHienThiToiDa) {
+          count++;
+          return true;
+        }
+
+        return false;
+      });
+      return kq.length > 0 ? true : false;
+    });
+    return __jsx("div", {
+      className: "pb-40",
+      key: i,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 27
+      },
+      __self: undefined
+    }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+      href: _const_routes__WEBPACK_IMPORTED_MODULE_5__["default"].ProductDetail.href,
+      as: _const_routes__WEBPACK_IMPORTED_MODULE_5__["default"].ProductDetail.as(res.slug),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 28
+      },
+      __self: undefined
+    }, __jsx("h2", {
+      className: "fs-19 mylink",
+      onClick: () => callback("loading"),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 29
+      },
+      __self: undefined
+    }, res.name)), __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Row"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 31
+      },
+      __self: undefined
+    }, renderItems_categoriesChild(SoLuongHienThiToiDa, TenHienThiToiDa, categoriesChild_2_filter, callback), __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+      span: 6,
+      style: {
+        marginTop: "12px"
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 33
+      },
+      __self: undefined
+    }, renderRemainItems_categoriesChild(SoLuongHienThiToiDa, TenHienThiToiDa, res, categoriesChild_2, categoriesChild_2_filter, callback))));
+  })));
+};
+
+const CateComp2 = ({
+  SoLuongHienThiToiDa,
+  TenHienThiToiDa,
+  categoriesChild,
+  callback
+}) => {
+  return __jsx("div", {
+    style: {
+      background: 'white'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "pb-20 container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49
+    },
+    __self: undefined
+  }, __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Row"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50
+    },
+    __self: undefined
+  }, renderItems_categoriesChild(SoLuongHienThiToiDa, TenHienThiToiDa, categoriesChild, callback), __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+    span: 6,
+    style: {
+      marginTop: "12px"
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52
+    },
+    __self: undefined
+  }, renderRemainItems_categoriesChild(SoLuongHienThiToiDa, TenHienThiToiDa, null, categoriesChild, categoriesChild, callback))))));
+};
+
+const CateComp3 = ({
+  categoriesChild,
+  callback
+}) => {
+  return __jsx("div", {
+    style: {
+      background: 'white'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 64
+    },
+    __self: undefined
+  }, __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Row"], {
+    style: {
+      paddingTop: '20px'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65
+    },
+    __self: undefined
+  }, categoriesChild.map((res, i) => {
+    return __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+      span: 4,
+      key: i,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 69
+      },
+      __self: undefined
+    }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+      href: _const_routes__WEBPACK_IMPORTED_MODULE_5__["default"].ProductDetail.href,
+      as: _const_routes__WEBPACK_IMPORTED_MODULE_5__["default"].ProductDetail.as(res.slug),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 70
+      },
+      __self: undefined
+    }, __jsx("div", {
+      className: "cateComp",
+      onClick: () => callback(1),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 71
+      },
+      __self: undefined
+    }, __jsx("img", {
+      src: `/images/${res.url}`,
+      style: {
+        width: '100%'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 72
+      },
+      __self: undefined
+    }), __jsx("div", {
+      className: "text-center p-15 titleChild",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 73
+      },
+      __self: undefined
+    }, res.name))));
+  }))));
+};
+
+const ProductsList = ({
+  productsChild,
+  callback
+}) => {
+  return __jsx("div", {
+    className: "productsList mb-30 mt-15 container",
+    style: {
+      boxShadow: '0 1px 3px 0 rgba(0,0,0,.08)'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 86
+    },
+    __self: undefined
+  }, __jsx("div", {
+    style: {
+      padding: '20px',
+      background: 'white',
+      borderBottom: '1px solid #dddddd8c'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 88
+    },
+    __self: undefined
+  }, __jsx("button", {
+    className: "btn_filter",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 89
+    },
+    __self: undefined
+  }, __jsx("div", {
+    style: {
+      display: 'flex'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 90
+    },
+    __self: undefined
+  }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__["FontAwesomeIcon"], {
+    icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__["faSlidersH"],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 91
+    },
+    __self: undefined
+  }), __jsx("span", {
+    className: "d-block ml-10",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 92
+    },
+    __self: undefined
+  }, "All Filters")))), __jsx("div", {
+    style: {
+      background: 'white'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 97
+    },
+    __self: undefined
+  }, __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Row"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 98
+    },
+    __self: undefined
+  }, productsChild.map((res, i) => {
+    return __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+      span: 6,
+      key: i,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 101
+      },
+      __self: undefined
+    }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+      href: _const_routes__WEBPACK_IMPORTED_MODULE_5__["default"].ProductsList.href,
+      as: _const_routes__WEBPACK_IMPORTED_MODULE_5__["default"].ProductsList.as(res.slug, res.id),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 102
+      },
+      __self: undefined
+    }, __jsx("div", {
+      className: "productItems",
+      onClick: () => callback("loading"),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 103
+      },
+      __self: undefined
+    }, __jsx("img", {
+      src: `/images/${res.url}`,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 104
+      },
+      __self: undefined
+    }), __jsx("div", {
+      className: "info",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 105
+      },
+      __self: undefined
+    }, __jsx("span", {
+      className: "d-block name",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 106
+      },
+      __self: undefined
+    }, res.name), __jsx("span", {
+      className: "d-block price",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 107
+      },
+      __self: undefined
+    }, _services_myService__WEBPACK_IMPORTED_MODULE_6__["MyService"].dotsNumber(res.price)), __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Rate"], {
+      allowHalf: true,
+      defaultValue: 2.5,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 108
+      },
+      __self: undefined
+    })), res.sale ? __jsx("small", {
+      className: "sale",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 110
+      },
+      __self: undefined
+    }, "Sale") : null)));
+  }))));
+};
+
+const renderItems_categoriesChild = (SoLuongHienThiToiDa, TenHienThiToiDa, categoriesChild_2_filter, callback) => {
+  if (categoriesChild_2_filter.length > 0) {
+    return categoriesChild_2_filter.map((res, i) => {
+      return i + 1 < SoLuongHienThiToiDa ? __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+        span: 6,
+        style: {
+          marginTop: '12px'
+        },
+        key: i,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 126
+        },
+        __self: undefined
+      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+        href: _const_routes__WEBPACK_IMPORTED_MODULE_5__["default"].ProductDetail.href,
+        as: _const_routes__WEBPACK_IMPORTED_MODULE_5__["default"].ProductDetail.as(res.slug),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 127
+        },
+        __self: undefined
+      }, __jsx("div", {
+        className: "itemImage",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 128
+        },
+        __self: undefined
+      }, __jsx("img", {
+        className: "imgItem",
+        src: `/images/${res.url}`,
+        style: {
+          cursor: 'pointer'
+        },
+        onClick: () => callback(1),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 129
+        },
+        __self: undefined
+      }), __jsx("span", {
+        className: "title",
+        style: {
+          width: '120px',
+          display: 'block'
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 130
+        },
+        __self: undefined
+      }, res.name)))) : null;
+    });
+  }
+
+  return null;
+};
+
+const renderRemainItems_categoriesChild = (SoLuongHienThiToiDa, TenHienThiToiDa, Parent, categoriesChild_2, categoriesChild_2_filter, callback) => {
+  if (categoriesChild_2_filter.length > 0 && categoriesChild_2_filter.length === SoLuongHienThiToiDa) {
+    return __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+      href: "/",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 143
+      },
+      __self: undefined
+    }, __jsx("div", {
+      className: "itemImage",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 144
+      },
+      __self: undefined
+    }, __jsx("img", {
+      className: "imgItem",
+      src: `/images/${categoriesChild_2_filter[SoLuongHienThiToiDa - 1].url}`,
+      style: {
+        cursor: 'pointer'
+      },
+      onClick: () => callback(1),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 145
+      },
+      __self: undefined
+    }), __jsx("span", {
+      className: "title",
+      style: {
+        width: '120px',
+        display: 'block'
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 146
+      },
+      __self: undefined
+    }, categoriesChild_2_filter[SoLuongHienThiToiDa - 1].name)));
+  }
+
+  if (categoriesChild_2_filter.length > 0 && categoriesChild_2_filter.length > SoLuongHienThiToiDa) {
+    return categoriesChild_2_filter.map((res, i) => {
+      // Tối đa tổng số lương nhìn thấy === tổng số sản phẩm (Show hết)
+      if (i + 1 >= SoLuongHienThiToiDa && i + 1 === categoriesChild_2.length) {
+        return __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+          key: i,
+          span: 24,
+          style: {
+            marginTop: '12px'
+          },
+          key: i,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 156
+          },
+          __self: undefined
+        }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+          href: "/",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 157
+          },
+          __self: undefined
+        }, __jsx("p", {
+          className: "mylink mt-8 mb-0 fs-16",
+          onClick: () => callback(1),
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 158
+          },
+          __self: undefined
+        }, res.name)));
+      } // Tối đa tổng số lượng nhìn thấy, còn dư (Show all)
+
+
+      if (i + 1 >= SoLuongHienThiToiDa && i + 1 === SoLuongHienThiToiDa + TenHienThiToiDa & i + 1 !== categoriesChild_2.length) {
+        return __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+          key: i,
+          span: 24,
+          style: {
+            marginTop: '12px'
+          },
+          key: i,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 166
+          },
+          __self: undefined
+        }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+          href: _const_routes__WEBPACK_IMPORTED_MODULE_5__["default"].ProductDetail.href,
+          as: _const_routes__WEBPACK_IMPORTED_MODULE_5__["default"].ProductDetail.as(Parent.slug),
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 167
+          },
+          __self: undefined
+        }, __jsx("p", {
+          className: "mylink mt-8 mb-0 fs-16 font-bold",
+          onClick: () => callback(1),
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 168
+          },
+          __self: undefined
+        }, "Show All ", Parent.name, " ", __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__["FontAwesomeIcon"], {
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__["faChevronRight"],
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 168
+          },
+          __self: undefined
+        }), " ")));
+      }
+
+      if (i + 1 >= SoLuongHienThiToiDa && i + 1 !== SoLuongHienThiToiDa + TenHienThiToiDa && i + 1 !== categoriesChild_2.length) {
+        return __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+          key: i,
+          span: 24,
+          style: {
+            marginTop: '12px'
+          },
+          key: i,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 175
+          },
+          __self: undefined
+        }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+          href: "/",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 176
+          },
+          __self: undefined
+        }, __jsx("p", {
+          className: "mylink mt-8 mb-0 fs-16",
+          onClick: () => callback(1),
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 177
+          },
+          __self: undefined
+        }, res.name)));
+      }
+    });
+  }
+
+  return null;
+};
+/*
+    CateComp1 
+        - SoLuongHienThiToiDa   : 
+        - TenHienThiToiDa       :
+        - Product               : Sản phẩm category F1
+        - categoriesChild         : danh sách sản phẩm con của product F2
+        - categoriesChild_2       : danh sách sản phẩm con của con product F3
+
+*/
+
+
+const CategoryComp = ({
+  product,
+  categoriesChild,
+  categoriesChild_2,
+  productsChild,
+  callback
+}) => {
+  const choose = {
+    0: __jsx(CateComp1, {
+      SoLuongHienThiToiDa: 4,
+      TenHienThiToiDa: 2,
+      categoriesChild: categoriesChild,
+      categoriesChild_2: categoriesChild_2,
+      callback: res => callback(res),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 200
+      },
+      __self: undefined
+    }),
+    1: __jsx(CateComp2, {
+      SoLuongHienThiToiDa: categoriesChild.length,
+      TenHienThiToiDa: 0,
+      categoriesChild: categoriesChild,
+      callback: res => callback(res),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 201
+      },
+      __self: undefined
+    }),
+    2: __jsx(CateComp3, {
+      categoriesChild: categoriesChild,
+      callback: res => callback(res),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 202
+      },
+      __self: undefined
+    }),
+    3: __jsx(ProductsList, {
+      productsChild: productsChild,
+      callback: res => callback(res),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 203
+      },
+      __self: undefined
+    })
+  };
+  return choose[product.typeShow];
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (CategoryComp);
+
+/***/ }),
+
+/***/ "./src/components/ProductPage/productComp.js":
+/*!***************************************************!*\
+  !*** ./src/components/ProductPage/productComp.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd */ "antd");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _services_myService__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/myService */ "./src/services/myService.js");
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ant-design/icons */ "@ant-design/icons");
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_ant_design_icons__WEBPACK_IMPORTED_MODULE_3__);
+var _jsxFileName = "/Volumes/Data/House/src/components/ProductPage/productComp.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
+const {
+  Panel
+} = antd__WEBPACK_IMPORTED_MODULE_1__["Collapse"];
+const text = `
+  A dog is a type of domesticated animal.
+  Known for its loyalty and faithfulness,
+  it can be found as a welcome guest in many households across the world.
+`;
+
+const ProductComp = ({
+  productDetail
+}) => {
+  return __jsx("div", {
+    style: {
+      background: 'white'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: undefined
+  }, __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Row"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: undefined
+  }, __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+    span: 14,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: undefined
+  }, __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: undefined
+  }, __jsx("img", {
+    style: {
+      width: '100%'
+    },
+    src: `/images/${productDetail.url}`,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: undefined
+  }))), __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+    span: 10,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: undefined
+  }, __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: undefined
+  }, __jsx("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: undefined
+  }, productDetail.name), __jsx("small", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: undefined
+  }, " By ", __jsx("span", {
+    style: {
+      textDecoration: 'underline'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: undefined
+  }, "Truc Nguyen")), __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: undefined
+  }), __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Rate"], {
+    allowHalf: true,
+    defaultValue: 2.5,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: undefined
+  }), " ", __jsx("small", {
+    style: {
+      textDecoration: 'underline'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: undefined
+  }, "50 Reviews"), __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: undefined
+  }), __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: undefined
+  }), productDetail.sale ? __jsx("small", {
+    className: "sale2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34
+    },
+    __self: undefined
+  }, "Sale") : null, __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: undefined
+  }), __jsx("p", {
+    className: "mt-5 mb-0",
+    style: {
+      fontSize: '1.875rem',
+      fontWeight: '500'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    },
+    __self: undefined
+  }, _services_myService__WEBPACK_IMPORTED_MODULE_2__["MyService"].dotsNumber(productDetail.price)), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: undefined
+  }, __jsx("span", {
+    style: {
+      textDecoration: 'line-through'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: undefined
+  }, _services_myService__WEBPACK_IMPORTED_MODULE_2__["MyService"].dotsNumber(productDetail.price + parseInt(productDetail.sale))), __jsx("span", {
+    className: "primaryColor",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41
+    },
+    __self: undefined
+  }, __jsx("b", {
+    className: "ml-10 mr-5",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41
+    },
+    __self: undefined
+  }, "60%"), "Off")), __jsx("div", {
+    className: "mt-20",
+    style: {
+      display: 'flex'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
+    },
+    __self: undefined
+  }, __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["InputNumber"], {
+    style: {
+      fontWeight: '500',
+      flexGrow: '1',
+      height: '53px'
+    },
+    formatter: value => `Qty: ${value}`,
+    min: 1,
+    max: 10,
+    defaultValue: 3,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: undefined
+  }), __jsx("button", {
+    className: "my-btn ml-20",
+    style: {
+      borderRadius: '5px',
+      fontSize: '1rem',
+      flexGrow: '20'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
+    },
+    __self: undefined
+  }, "Add to Cart")), __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Collapse"], {
+    className: "mt-20",
+    accordion: true,
+    expandIcon: ({
+      isActive
+    }) => __jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_3__["CaretRightOutlined"], {
+      rotate: isActive ? 90 : 0,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 48
+      },
+      __self: undefined
+    }),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47
+    },
+    __self: undefined
+  }, __jsx(Panel, {
+    header: __jsx("b", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 50
+      },
+      __self: undefined
+    }, "Product Description"),
+    key: "1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50
+    },
+    __self: undefined
+  }, __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51
+    },
+    __self: undefined
+  }, text)), __jsx(Panel, {
+    header: __jsx("b", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 53
+      },
+      __self: undefined
+    }, "Product Specifications"),
+    key: "2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53
+    },
+    __self: undefined
+  }, __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54
+    },
+    __self: undefined
+  }, text)), __jsx(Panel, {
+    header: __jsx("b", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 56
+      },
+      __self: undefined
+    }, "Shipping and Returns"),
+    key: "3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56
+    },
+    __self: undefined
+  }, __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57
+    },
+    __self: undefined
+  }, text))))))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ProductComp);
+
+/***/ }),
+
 /***/ "./src/components/SharedComp/LoadingPage.js":
 /*!**************************************************!*\
   !*** ./src/components/SharedComp/LoadingPage.js ***!
@@ -1871,484 +2840,6 @@ const LoadingPage = ({
 
 /***/ }),
 
-/***/ "./src/components/categoryComp.js":
-/*!****************************************!*\
-  !*** ./src/components/categoryComp.js ***!
-  \****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd */ "antd");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "@fortawesome/react-fontawesome");
-/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "@fortawesome/free-solid-svg-icons");
-/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _const_routes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../const/routes */ "./src/const/routes.js");
-var _jsxFileName = "/Volumes/Data/House/src/components/categoryComp.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-
-
-
-const CateComp1 = ({
-  SoLuongHienThiToiDa,
-  TenHienThiToiDa,
-  productsChild,
-  productsChild_2,
-  callback
-}) => {
-  let count = 0;
-  return productsChild.map((res, i) => {
-    const productsChild_2_filter = productsChild_2.filter(val => {
-      let kq = val.parent.filter(x => {
-        if (x === res.id && count < SoLuongHienThiToiDa + TenHienThiToiDa) {
-          count++;
-          return true;
-        }
-
-        return false;
-      });
-      return kq.length > 0 ? true : false;
-    });
-    return __jsx("div", {
-      className: "mb-40",
-      key: i,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 21
-      },
-      __self: undefined
-    }, __jsx("h2", {
-      className: "fs-19 mt-25",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 22
-      },
-      __self: undefined
-    }, res.name), __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Row"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 23
-      },
-      __self: undefined
-    }, renderItems_productsChild(SoLuongHienThiToiDa, TenHienThiToiDa, productsChild_2_filter, callback), __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Col"], {
-      span: 6,
-      style: {
-        marginTop: "12px"
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 25
-      },
-      __self: undefined
-    }, renderRemainItems_productsChild(SoLuongHienThiToiDa, TenHienThiToiDa, res.name, productsChild_2, productsChild_2_filter, callback))));
-  });
-};
-
-const CateComp2 = ({
-  SoLuongHienThiToiDa,
-  TenHienThiToiDa,
-  productsChild,
-  callback
-}) => {
-  return __jsx("div", {
-    className: "mb-20",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: undefined
-  }, __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Row"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: undefined
-  }, renderItems_productsChild(SoLuongHienThiToiDa, TenHienThiToiDa, productsChild, callback), __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Col"], {
-    span: 6,
-    style: {
-      marginTop: "12px"
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38
-    },
-    __self: undefined
-  }, renderRemainItems_productsChild(SoLuongHienThiToiDa, TenHienThiToiDa, null, productsChild, productsChild, callback))));
-};
-
-const CateComp3 = ({
-  productsChild,
-  callback
-}) => {
-  return __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Row"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 47
-    },
-    __self: undefined
-  }, productsChild.map((res, i) => {
-    return __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Col"], {
-      span: 4,
-      key: i,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 51
-      },
-      __self: undefined
-    }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "/",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 52
-      },
-      __self: undefined
-    }, __jsx("div", {
-      className: "cateComp",
-      onClick: () => callback(1),
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 53
-      },
-      __self: undefined
-    }, __jsx("img", {
-      src: `/images/${res.url}`,
-      style: {
-        width: '100%'
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 54
-      },
-      __self: undefined
-    }), __jsx("div", {
-      className: "text-center p-15 titleChild mt-5",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 55
-      },
-      __self: undefined
-    }, res.name))));
-  }));
-};
-
-const renderItems_productsChild = (SoLuongHienThiToiDa, TenHienThiToiDa, productsChild_2_filter, callback) => {
-  if (productsChild_2_filter.length > 0) {
-    return productsChild_2_filter.map((res, i) => {
-      return i + 1 < SoLuongHienThiToiDa ? __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Col"], {
-        span: 6,
-        style: {
-          marginTop: '12px'
-        },
-        key: i,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 69
-        },
-        __self: undefined
-      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-        href: _const_routes__WEBPACK_IMPORTED_MODULE_5__["default"].ProductDetail.href,
-        as: _const_routes__WEBPACK_IMPORTED_MODULE_5__["default"].ProductDetail.as(res.slug),
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 70
-        },
-        __self: undefined
-      }, __jsx("div", {
-        className: "itemImage",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 71
-        },
-        __self: undefined
-      }, __jsx("img", {
-        className: "imgItem",
-        src: `/images/${res.url}`,
-        style: {
-          cursor: 'pointer'
-        },
-        onClick: () => callback(1),
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 72
-        },
-        __self: undefined
-      }), __jsx("span", {
-        className: "title",
-        style: {
-          width: '120px',
-          display: 'block'
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 73
-        },
-        __self: undefined
-      }, res.name)))) : null;
-    });
-  }
-
-  return null;
-};
-
-const renderRemainItems_productsChild = (SoLuongHienThiToiDa, TenHienThiToiDa, nameParent, productsChild_2, productsChild_2_filter, callback) => {
-  if (productsChild_2_filter.length === SoLuongHienThiToiDa) {
-    return __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      href: "/",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 86
-      },
-      __self: undefined
-    }, __jsx("div", {
-      className: "itemImage",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 87
-      },
-      __self: undefined
-    }, __jsx("img", {
-      className: "imgItem",
-      src: `/images/${productsChild_2_filter[SoLuongHienThiToiDa - 1].url}`,
-      style: {
-        cursor: 'pointer'
-      },
-      onClick: () => callback(1),
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 88
-      },
-      __self: undefined
-    }), __jsx("span", {
-      className: "title",
-      style: {
-        width: '120px',
-        display: 'block'
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 89
-      },
-      __self: undefined
-    }, productsChild_2_filter[SoLuongHienThiToiDa - 1].name)));
-  }
-
-  if (productsChild_2_filter.length > SoLuongHienThiToiDa) {
-    return productsChild_2_filter.map((res, i) => {
-      // Tối đa tổng số lương nhìn thấy === tổng số sản phẩm (Show hết)
-      if (i + 1 >= SoLuongHienThiToiDa && i + 1 === productsChild_2.length) {
-        return __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Col"], {
-          key: i,
-          span: 24,
-          style: {
-            marginTop: '12px'
-          },
-          key: i,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 99
-          },
-          __self: undefined
-        }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-          href: "/",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 100
-          },
-          __self: undefined
-        }, __jsx("p", {
-          className: "mylink mt-8 mb-0 fs-16",
-          onClick: () => callback(1),
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 101
-          },
-          __self: undefined
-        }, res.name)));
-      } // Tối đa tổng số lượng nhìn thấy, còn dư (Show all)
-
-
-      if (i + 1 >= SoLuongHienThiToiDa && i + 1 === SoLuongHienThiToiDa + TenHienThiToiDa & i + 1 !== productsChild_2.length) {
-        return __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Col"], {
-          key: i,
-          span: 24,
-          style: {
-            marginTop: '12px'
-          },
-          key: i,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 109
-          },
-          __self: undefined
-        }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-          href: "/",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 110
-          },
-          __self: undefined
-        }, __jsx("p", {
-          className: "mylink mt-8 mb-0 fs-16 font-bold",
-          onClick: () => callback(1),
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 111
-          },
-          __self: undefined
-        }, "Show All ", nameParent, " ", __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__["FontAwesomeIcon"], {
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__["faChevronRight"],
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 111
-          },
-          __self: undefined
-        }), " ")));
-      }
-
-      if (i + 1 >= SoLuongHienThiToiDa && i + 1 !== SoLuongHienThiToiDa + TenHienThiToiDa && i + 1 !== productsChild_2.length) {
-        return __jsx(antd__WEBPACK_IMPORTED_MODULE_1__["Col"], {
-          key: i,
-          span: 24,
-          style: {
-            marginTop: '12px'
-          },
-          key: i,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 118
-          },
-          __self: undefined
-        }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-          href: "/",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 119
-          },
-          __self: undefined
-        }, __jsx("p", {
-          className: "mylink mt-8 mb-0 fs-16",
-          onClick: () => callback(1),
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 120
-          },
-          __self: undefined
-        }, res.name)));
-      }
-    });
-  }
-
-  return null;
-};
-/*
-    CateComp1 
-        - SoLuongHienThiToiDa   : 
-        - TenHienThiToiDa       :
-        - Product               : Sản phẩm category F1
-        - productsChild         : danh sách sản phẩm con của product F2
-        - productsChild_2       : danh sách sản phẩm con của con product F3
-
-*/
-
-
-const CategoryComp = ({
-  product,
-  productsChild,
-  productsChild_2,
-  callback
-}) => {
-  const choose = {
-    0: __jsx(CateComp1, {
-      SoLuongHienThiToiDa: 4,
-      TenHienThiToiDa: 2,
-      productsChild: productsChild,
-      productsChild_2: productsChild_2,
-      callback: res => callback(res),
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 143
-      },
-      __self: undefined
-    }),
-    1: __jsx(CateComp2, {
-      SoLuongHienThiToiDa: productsChild.length,
-      TenHienThiToiDa: 0,
-      productsChild: productsChild,
-      callback: res => callback(res),
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 144
-      },
-      __self: undefined
-    }),
-    2: __jsx(CateComp3, {
-      productsChild: productsChild,
-      callback: res => callback(res),
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 145
-      },
-      __self: undefined
-    })
-  };
-  return choose[product.typeShow];
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (CategoryComp);
-
-/***/ }),
-
-/***/ "./src/components/productComp.js":
-/*!***************************************!*\
-  !*** ./src/components/productComp.js ***!
-  \***************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Volumes/Data/House/src/components/productComp.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-const ProductComp = () => {
-  return __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 3
-    },
-    __self: undefined
-  }, "cc");
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (ProductComp);
-
-/***/ }),
-
-/***/ "./src/const/const.js":
-/*!****************************!*\
-  !*** ./src/const/const.js ***!
-  \****************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-
-/***/ }),
-
 /***/ "./src/const/routes.js":
 /*!*****************************!*\
   !*** ./src/const/routes.js ***!
@@ -2372,9 +2863,23 @@ _defineProperty(MyRouter, "Products", {
   href: "/products"
 });
 
+_defineProperty(MyRouter, "Photos", {
+  href: "/photos"
+});
+
 _defineProperty(MyRouter, "ProductDetail", {
   href: `${MyRouter.Products.href}/${MyRouter.slug}`,
   as: slug => `${MyRouter.Products.href}/${slug}`
+});
+
+_defineProperty(MyRouter, "ProductsList", {
+  href: `${MyRouter.Products.href}/${MyRouter.slug}`,
+  as: (slug, id) => `${MyRouter.Products.href}/${slug}~${id}`
+});
+
+_defineProperty(MyRouter, "PhotoDetails", {
+  href: `${MyRouter.Photos.href}/${MyRouter.slug}`,
+  as: (slug, id) => `${MyRouter.Photos.href}/${slug}~${id}`
 });
 
 /* harmony default export */ __webpack_exports__["default"] = (MyRouter);
@@ -2385,243 +2890,358 @@ _defineProperty(MyRouter, "ProductDetail", {
 /*!**************************!*\
   !*** ./src/data/data.js ***!
   \**************************/
-/*! exports provided: dataCategories */
+/*! exports provided: dataProducts, dataCategories, dataPhotoCatories, dataProductPhotos */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dataProducts", function() { return dataProducts; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dataCategories", function() { return dataCategories; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dataPhotoCatories", function() { return dataPhotoCatories; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dataProductPhotos", function() { return dataProductPhotos; });
+/*
+    View chỉ ap dụng data có dạng 3 phân cấp: F1 -> F2 -> F3 -> Products
+
+    Properties:
+        typeShow: loại hiển thị danh mục theo layout. Nếu typeShow = 3 thì children sẽ là id theo bảng products
+*/
+const dataProducts = [{
+  id: '1',
+  idParent: '18',
+  name: 'Desoto Sofa',
+  slug: 'desoto-sofa',
+  price: 12000,
+  sale: '3000',
+  url: 'products1.jpg',
+  provider: ''
+}, {
+  id: '2',
+  idParent: '18',
+  name: 'Cotoro Sofa',
+  slug: 'cotoro-sofa',
+  price: 10000,
+  sale: '50',
+  url: 'products2.jpg',
+  provider: ''
+}, {
+  id: '3',
+  idParent: '18',
+  name: 'Dania Sofa',
+  slug: 'dania-sofa',
+  price: 15000,
+  sale: '',
+  url: 'products3.jpg',
+  provider: ''
+}, {
+  id: '4',
+  idParent: '18',
+  name: 'Kaito Sofa',
+  slug: 'kaito-sofa',
+  price: 90000,
+  sale: '',
+  url: 'products4.jpg',
+  provider: ''
+}, {
+  id: '5',
+  idParent: '18',
+  name: 'Desoto Sofa',
+  slug: 'desoto-sofa',
+  price: 12000,
+  sale: '30',
+  url: 'products1.jpg',
+  provider: ''
+}, {
+  id: '6',
+  idParent: '18',
+  name: 'Cotoro Sofa',
+  slug: 'cotoro-sofa',
+  price: 10000,
+  sale: '50',
+  url: 'products2.jpg',
+  provider: ''
+}, {
+  id: '7',
+  idParent: '18',
+  name: 'Dania Sofa',
+  slug: 'dania-sofa',
+  price: 15000,
+  sale: '',
+  url: 'products3.jpg',
+  provider: ''
+}, {
+  id: '8',
+  idParent: '18',
+  slug: 'kaito-sofa',
+  price: 90000,
+  sale: '',
+  url: 'products4.jpg',
+  provider: ''
+}];
 const dataCategories = [// Cha
 {
-  id: 1,
+  id: '1',
   name: 'Furniture',
   slug: 'furniture',
   url: 'cate1.jpg',
+  breadcrumb: [],
   parent: [],
-  children: [7, 8, 9, 10, 11],
+  children: ['7', '8', '9', '10', '11'],
   typeShow: 0
 }, {
-  id: 2,
+  id: '2',
   name: 'Kitchen & Dining',
   slug: 'kitchen-dining',
   url: 'cate2.jpg',
+  breadcrumb: [],
   parent: [],
   children: [],
   typeShow: 0
 }, {
-  id: 3,
+  id: '3',
   name: 'Bath',
   url: 'cate3.jpg',
   slug: 'bath',
+  breadcrumb: [],
   parent: [],
   children: [],
   typeShow: 1
 }, {
-  id: 4,
+  id: '4',
   name: 'Lighting',
   url: 'cate1.jpg',
   slug: 'ligting',
+  breadcrumb: [],
   parent: [],
-  children: [12],
+  children: ['12'],
   typeShow: 1
 }, {
-  id: 5,
+  id: '5',
   name: 'Living',
   url: 'cate2.jpg',
   slug: 'living',
+  breadcrumb: [],
   parent: [],
-  children: [12, 13, 14, 15, 16, 17],
+  children: ['12', '13', '14', '15', '16', '17'],
   typeShow: 1
 }, {
-  id: 6,
+  id: '6',
   name: 'Bedroom',
   url: 'cate3.jpg',
   slug: 'bedroom',
+  breadcrumb: [],
   parent: [],
   children: [],
   typeShow: 1
 }, // Con
 {
-  id: 7,
+  id: '7',
   name: 'Living Room Furniture',
   slug: 'luving-room-furniture',
-  parent: [1],
-  children: [112, 12, 13, 14, 15, 16, 17],
+  breadcrumb: ['1'],
+  parent: ['1'],
+  children: ['12', '112', '13', '14', '15', '16', '17'],
   typeShow: 2
 }, {
-  id: 8,
+  id: '8',
   name: 'Kitchen & Dining Furniture',
   slug: 'kitchen-dining-furniture',
-  parent: [1],
+  breadcrumb: ['1'],
+  parent: ['1'],
   children: [],
   typeShow: 2
 }, {
-  id: 9,
+  id: '9',
   name: 'Bedroom Furniture',
   slug: 'bedroom-furniture',
-  parent: [1],
+  breadcrumb: ['1'],
+  parent: ['1'],
   children: [],
   typeShow: 2
 }, {
-  id: 10,
+  id: '10',
   name: 'Outdoor Furniture',
   slug: 'outdoor-furniture',
-  parent: [1],
+  breadcrumb: ['1'],
+  parent: ['1'],
   children: [],
   typeShow: 2
 }, {
-  id: 11,
+  id: '11',
   name: 'Home Office Furniture',
   slug: 'home-office-furniture',
-  parent: [1],
+  breadcrumb: ['1'],
+  parent: ['1'],
   children: [],
   typeShow: 2
 }, {
-  id: 112,
-  name: 'Home Decor',
-  url: 'productsPosition2.jpg',
-  slug: 'home-decor',
-  parent: [7],
-  children: [],
-  typeShow: 2
-}, {
-  id: 12,
+  id: '12',
   name: 'Sofas & Sectionals',
   url: 'productsPosition1.jpg',
   slug: 'sofas-sectionals',
-  parent: [5, 7],
-  children: [18, 19, 20, 21, 22, 23],
+  breadcrumb: ['5'],
+  parent: ['7', '5'],
+  children: ['18', '19', '20', '21', '22', '23'],
   typeShow: 2
 }, {
-  id: 13,
+  id: '112',
+  name: 'Home Decor',
+  url: 'productsPosition2.jpg',
+  slug: 'home-decor',
+  breadcrumb: ['7'],
+  parent: ['7'],
+  children: [],
+  typeShow: 2
+}, {
+  id: '13',
   url: 'productsPosition2.jpg',
   name: 'Coffee & Accent Table',
   slug: 'coffee-accent-table',
-  parent: [5, 7],
+  breadcrumb: ['5'],
+  parent: ['7', '5'],
   children: [],
   typeShow: 2
 }, {
-  id: 14,
+  id: '14',
   url: 'ProductsPosition3.jpg',
   name: 'Chairs',
   slug: 'chairs',
-  parent: [5, 7],
+  breadcrumb: ['5'],
+  parent: ['7', '5'],
   children: [],
   typeShow: 2
 }, {
-  id: 15,
+  id: '15',
   url: 'productsPosition1.jpg',
   name: 'Media Storage',
   slug: 'media-storage',
-  parent: [5, 7],
+  breadcrumb: ['5'],
+  parent: ['7', '5'],
   children: [],
   typeShow: 2
 }, {
-  id: 16,
+  id: '16',
   url: 'productsPosition2.jpg',
   name: 'Bookcases',
   slug: 'bookcases',
-  parent: [5, 7],
+  breadcrumb: ['5'],
+  parent: ['7', '5'],
   children: [],
   typeShow: 2
 }, {
-  id: 17,
+  id: '17',
   url: 'productsPosition3.jpg',
   name: 'Footstools & Ottomans',
   slug: 'chairs',
-  parent: [5, 7],
+  breadcrumb: ['5'],
+  parent: ['7', '5'],
   children: [],
   typeShow: 2
 }, {
-  id: 18,
+  id: '18',
   url: 'cate3-1.jpg',
   name: 'Sofas',
   slug: 'sofas',
-  parent: [12],
-  children: [],
+  breadcrumb: ['5', '12'],
+  parent: ['12'],
+  children: ['1', '2', '3', '4', '5', '6', '7', '8'],
   typeShow: 3
 }, {
-  id: 19,
+  id: '19',
   url: 'cate3-2.jpg',
   name: 'Sectional Sofas',
   slug: 'sectional-sofas',
-  parent: [12],
+  breadcrumb: ['12'],
+  parent: ['12'],
   children: [],
   typeShow: 3
 }, {
-  id: 20,
+  id: '20',
   url: 'cate3-3.jpg',
   name: 'Love Seat',
   slug: 'love-seat',
-  parent: [12],
+  breadcrumb: ['12'],
+  parent: ['12'],
   children: [],
   typeShow: 3
 }, {
-  id: 21,
+  id: '21',
   url: 'cate3-4.jpg',
   name: 'Futons and Accessories',
   slug: 'futons-and-accessories',
-  parent: [12],
+  breadcrumb: ['12'],
+  parent: ['12'],
   children: [],
   typeShow: 3
 }, {
-  id: 22,
+  id: '22',
   url: 'cate3-5.jpg',
   name: 'Sleeper Sofas',
   slug: 'sleeper-sofas',
-  parent: [12],
+  breadcrumb: ['12'],
+  parent: ['12'],
   children: [],
   typeShow: 3
 }, {
-  id: 23,
+  id: '23',
   url: 'cate3-6.jpg',
   name: 'Living Room Furniture Seat',
   slug: 'living-room-furniture-seat',
-  parent: [12],
+  breadcrumb: ['12'],
+  parent: ['12'],
   children: [],
   typeShow: 3
+}]; // danh cho photos
+
+const dataPhotoCatories = [{
+  id: '1',
+  name: 'Kitchen',
+  url: 'photos1.jpg'
+}, {
+  id: '2',
+  name: 'Bath',
+  url: 'photos2.jpg'
+}, {
+  id: '3',
+  name: 'Bedroom',
+  url: 'photos3.jpg'
+}, {
+  id: '4',
+  name: 'Living',
+  url: 'photos4.jpg'
+}, {
+  id: '5',
+  name: 'Dining',
+  url: 'photos1.jpg'
+}, {
+  id: '6',
+  name: 'Outdoor',
+  url: 'photos2.jpg'
+}, {
+  id: '7',
+  name: 'Baby Kid',
+  url: 'photos3.jpg'
+}, {
+  id: '8',
+  name: 'Home Office',
+  url: 'photos4.jpg'
 }];
-
-/***/ }),
-
-/***/ "./src/hoc/newComponent.jsx":
-/*!**********************************!*\
-  !*** ./src/hoc/newComponent.jsx ***!
-  \**********************************/
-/*! exports provided: NewHOC */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewHOC", function() { return NewHOC; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Volumes/Data/House/src/hoc/newComponent.jsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
-
-const NewHOC = PassedComponent => {
-  return class extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
-    render() {
-      return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 7
-        },
-        __self: this
-      }, __jsx(PassedComponent, _extends({}, this.props, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 8
-        },
-        __self: this
-      })));
-    }
-
-  };
-};
+const dataProductPhotos = [{
+  id: '1',
+  name: 'Master Bathroom',
+  slug: 'master-bathroom',
+  url: 'PhotoProduct1.jpg',
+  images: ["PhotoProduct2.jpg", "PhotoProduct3.jpg", "PhotoProduct2.jpg", "PhotoProduct1.jpg"]
+}, {
+  id: '2',
+  name: 'Hamstons Summer Home',
+  slug: 'hamstons-summer-home',
+  url: 'PhotoProduct2.jpg'
+}, {
+  id: '3',
+  name: 'Marietta Modern Farmhouse',
+  slug: 'marietta-modern-farmhouse',
+  url: 'PhotoProduct3.jpg'
+}];
 
 /***/ }),
 
@@ -2699,8 +3319,9 @@ const Footer = () => {
     style: {
       height: "60px",
       width: "100%",
-      borderTop: "1px solid #e6e6e6",
-      display: 'flex'
+      borderTop: "1px solid rgba(230, 230, 230, 0.64)",
+      display: 'flex',
+      background: 'white'
     },
     __source: {
       fileName: _jsxFileName,
@@ -2714,13 +3335,13 @@ const Footer = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 13
     },
     __self: undefined
   }, __jsx("style", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 14
     },
     __self: undefined
   }, `
@@ -2738,115 +3359,115 @@ const Footer = () => {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 24
     },
     __self: undefined
   }, __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 25
     },
     __self: undefined
   }, __jsx("small", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 26
     },
     __self: undefined
   }, "about")), __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 28
     },
     __self: undefined
   }, __jsx("small", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 29
     },
     __self: undefined
   }, "careers")), __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 31
     },
     __self: undefined
   }, __jsx("small", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 32
     },
     __self: undefined
   }, "mobile apps")), __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 34
     },
     __self: undefined
   }, __jsx("small", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 35
     },
     __self: undefined
   }, "professionals")), __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 37
     },
     __self: undefined
   }, __jsx("small", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 38
     },
     __self: undefined
   }, "buttons")), __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 40
     },
     __self: undefined
   }, __jsx("small", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 41
     },
     __self: undefined
   }, "advertise")), __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 43
     },
     __self: undefined
   }, __jsx("small", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 44
     },
     __self: undefined
   }, "sell")), __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 46
     },
     __self: undefined
   }, __jsx("small", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 47
     },
     __self: undefined
   }, "terms & privacy")), __jsx("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 49
     },
     __self: undefined
   }, __jsx("small", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 50
     },
     __self: undefined
   }, "\xA9 2020 houzz")))));
@@ -3094,8 +3715,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _const_routes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../const/routes */ "./src/const/routes.js");
 var _jsxFileName = "/Volumes/Data/House/src/layouts/layout1Comp/MegaMenu.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement;
+
 
 
 
@@ -3172,42 +3795,49 @@ class MegaMenu extends react__WEBPACK_IMPORTED_MODULE_3__["Component"] {
       id: "MegaMenu",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 78
+        lineNumber: 80
       },
       __self: this
     }, __jsx("div", {
       className: "parent container",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 79
+        lineNumber: 81
+      },
+      __self: this
+    }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+      href: _const_routes__WEBPACK_IMPORTED_MODULE_4__["default"].Photos.href,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 82
       },
       __self: this
     }, __jsx("div", {
       className: "item item1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 80
+        lineNumber: 83
       },
       __self: this
     }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_0__["FontAwesomeIcon"], {
       icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faPhotoVideo"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 81
+        lineNumber: 84
       },
       __self: this
     }), __jsx("span", {
       className: "nameMenu",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 82
+        lineNumber: 85
       },
       __self: this
     }, "photos"), __jsx("div", {
       className: "menu",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 83
+        lineNumber: 86
       },
       __self: this
     }, __jsx("div", {
@@ -3216,7 +3846,7 @@ class MegaMenu extends react__WEBPACK_IMPORTED_MODULE_3__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 84
+        lineNumber: 87
       },
       __self: this
     }, data[1].map((res, j) => {
@@ -3225,14 +3855,14 @@ class MegaMenu extends react__WEBPACK_IMPORTED_MODULE_3__["Component"] {
         className: "itemMenu",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 91
         },
         __self: this
       }, __jsx("h4", {
         className: "title mb-10",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 92
         },
         __self: this
       }, res.title), __jsx("ul", {
@@ -3242,7 +3872,7 @@ class MegaMenu extends react__WEBPACK_IMPORTED_MODULE_3__["Component"] {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 90
+          lineNumber: 93
         },
         __self: this
       }, res.data.map((res2, i) => {
@@ -3251,51 +3881,58 @@ class MegaMenu extends react__WEBPACK_IMPORTED_MODULE_3__["Component"] {
           className: "m-0 mylink",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 93
+            lineNumber: 96
           },
           __self: this
         }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
           href: "/aa",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 93
+            lineNumber: 96
           },
           __self: this
         }, __jsx("small", {
           className: "",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 93
+            lineNumber: 96
           },
           __self: this
         }, res2)));
       })));
-    })))), __jsx("div", {
+    }))))), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+      href: _const_routes__WEBPACK_IMPORTED_MODULE_4__["default"].Products.href,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 110
+      },
+      __self: this
+    }, __jsx("div", {
       className: "item item2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 105
+        lineNumber: 112
       },
       __self: this
     }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_0__["FontAwesomeIcon"], {
       icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faShoppingBasket"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 106
+        lineNumber: 113
       },
       __self: this
     }), __jsx("span", {
       className: "nameMenu",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 107
+        lineNumber: 114
       },
       __self: this
     }, "shop by department"), __jsx("div", {
       className: "menu",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 108
+        lineNumber: 115
       },
       __self: this
     }, __jsx("div", {
@@ -3304,7 +3941,7 @@ class MegaMenu extends react__WEBPACK_IMPORTED_MODULE_3__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 109
+        lineNumber: 116
       },
       __self: this
     }, data[1].map((res, j) => {
@@ -3313,14 +3950,14 @@ class MegaMenu extends react__WEBPACK_IMPORTED_MODULE_3__["Component"] {
         className: "itemMenu",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 113
+          lineNumber: 120
         },
         __self: this
       }, __jsx("h4", {
         className: "title mb-10",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 114
+          lineNumber: 121
         },
         __self: this
       }, res.title), __jsx("ul", {
@@ -3330,7 +3967,7 @@ class MegaMenu extends react__WEBPACK_IMPORTED_MODULE_3__["Component"] {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115
+          lineNumber: 122
         },
         __self: this
       }, res.data.map((res2, i) => {
@@ -3339,51 +3976,51 @@ class MegaMenu extends react__WEBPACK_IMPORTED_MODULE_3__["Component"] {
           className: "m-0",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 118
+            lineNumber: 125
           },
           __self: this
         }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
           href: "/aa",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 118
+            lineNumber: 125
           },
           __self: this
         }, __jsx("small", {
           className: "mylink",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 118
+            lineNumber: 125
           },
           __self: this
         }, res2)));
       })));
-    })))), __jsx("div", {
+    }))))), __jsx("div", {
       className: "item item3",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 130
+        lineNumber: 140
       },
       __self: this
     }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_0__["FontAwesomeIcon"], {
       icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faUserAstronaut"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 131
+        lineNumber: 141
       },
       __self: this
     }), __jsx("span", {
       className: "nameMenu",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 132
+        lineNumber: 142
       },
       __self: this
     }, "shop by department"), __jsx("div", {
       className: "menu",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 133
+        lineNumber: 143
       },
       __self: this
     }, __jsx("div", {
@@ -3392,7 +4029,7 @@ class MegaMenu extends react__WEBPACK_IMPORTED_MODULE_3__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 134
+        lineNumber: 144
       },
       __self: this
     }, data[1].map((res, j) => {
@@ -3401,14 +4038,14 @@ class MegaMenu extends react__WEBPACK_IMPORTED_MODULE_3__["Component"] {
         className: "itemMenu",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 138
+          lineNumber: 148
         },
         __self: this
       }, __jsx("h4", {
         className: "title mb-10",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 139
+          lineNumber: 149
         },
         __self: this
       }, res.title), __jsx("ul", {
@@ -3418,7 +4055,7 @@ class MegaMenu extends react__WEBPACK_IMPORTED_MODULE_3__["Component"] {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 140
+          lineNumber: 150
         },
         __self: this
       }, res.data.map((res2, i) => {
@@ -3427,21 +4064,21 @@ class MegaMenu extends react__WEBPACK_IMPORTED_MODULE_3__["Component"] {
           className: "m-0",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 143
+            lineNumber: 153
           },
           __self: this
         }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
           href: "/aa",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 143
+            lineNumber: 153
           },
           __self: this
         }, __jsx("small", {
           className: "mylink",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 143
+            lineNumber: 153
           },
           __self: this
         }, res2)));
@@ -3450,28 +4087,28 @@ class MegaMenu extends react__WEBPACK_IMPORTED_MODULE_3__["Component"] {
       className: "item item4",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 155
+        lineNumber: 165
       },
       __self: this
     }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_0__["FontAwesomeIcon"], {
       icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faBookReader"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 156
+        lineNumber: 166
       },
       __self: this
     }), __jsx("span", {
       className: "nameMenu",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 157
+        lineNumber: 167
       },
       __self: this
     }, "stories & advice"), __jsx("div", {
       className: "menu",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 158
+        lineNumber: 168
       },
       __self: this
     }, __jsx("div", {
@@ -3480,7 +4117,7 @@ class MegaMenu extends react__WEBPACK_IMPORTED_MODULE_3__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 159
+        lineNumber: 169
       },
       __self: this
     }, data[1].map((res, j) => {
@@ -3489,14 +4126,14 @@ class MegaMenu extends react__WEBPACK_IMPORTED_MODULE_3__["Component"] {
         className: "itemMenu",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 163
+          lineNumber: 173
         },
         __self: this
       }, __jsx("h4", {
         className: "title mb-10",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 164
+          lineNumber: 174
         },
         __self: this
       }, res.title), __jsx("ul", {
@@ -3506,7 +4143,7 @@ class MegaMenu extends react__WEBPACK_IMPORTED_MODULE_3__["Component"] {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 165
+          lineNumber: 175
         },
         __self: this
       }, res.data.map((res2, i) => {
@@ -3515,21 +4152,21 @@ class MegaMenu extends react__WEBPACK_IMPORTED_MODULE_3__["Component"] {
           className: "m-0",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 168
+            lineNumber: 178
           },
           __self: this
         }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
           href: "/aa",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 168
+            lineNumber: 178
           },
           __self: this
         }, __jsx("small", {
           className: "mylink",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 168
+            lineNumber: 178
           },
           __self: this
         }, res2)));
@@ -3538,28 +4175,28 @@ class MegaMenu extends react__WEBPACK_IMPORTED_MODULE_3__["Component"] {
       className: "item item5",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 180
+        lineNumber: 190
       },
       __self: this
     }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_0__["FontAwesomeIcon"], {
       icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faGift"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 181
+        lineNumber: 191
       },
       __self: this
     }), __jsx("span", {
       className: "nameMenu",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 182
+        lineNumber: 192
       },
       __self: this
     }, "SALE"), __jsx("div", {
       className: "menu",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 183
+        lineNumber: 193
       },
       __self: this
     }, __jsx("div", {
@@ -3568,7 +4205,7 @@ class MegaMenu extends react__WEBPACK_IMPORTED_MODULE_3__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 184
+        lineNumber: 194
       },
       __self: this
     }, data[1].map((res, j) => {
@@ -3577,14 +4214,14 @@ class MegaMenu extends react__WEBPACK_IMPORTED_MODULE_3__["Component"] {
         className: "itemMenu",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 188
+          lineNumber: 198
         },
         __self: this
       }, __jsx("h4", {
         className: "title mb-10",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 189
+          lineNumber: 199
         },
         __self: this
       }, res.title), __jsx("ul", {
@@ -3594,7 +4231,7 @@ class MegaMenu extends react__WEBPACK_IMPORTED_MODULE_3__["Component"] {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 190
+          lineNumber: 200
         },
         __self: this
       }, res.data.map((res2, i) => {
@@ -3603,21 +4240,21 @@ class MegaMenu extends react__WEBPACK_IMPORTED_MODULE_3__["Component"] {
           className: "m-0",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 193
+            lineNumber: 203
           },
           __self: this
         }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
           href: "/aa",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 193
+            lineNumber: 203
           },
           __self: this
         }, __jsx("small", {
           className: "mylink",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 193
+            lineNumber: 203
           },
           __self: this
         }, res2)));
@@ -3643,40 +4280,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStaticProps", function() { return getStaticProps; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var antd_dist_antd_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/dist/antd.css */ "./node_modules/antd/dist/antd.css");
-/* harmony import */ var antd_dist_antd_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_dist_antd_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _scss_pages_slug_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../scss/pages/[slug].scss */ "./src/scss/pages/[slug].scss");
-/* harmony import */ var _scss_pages_slug_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_scss_pages_slug_scss__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/router */ "next/router");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _layouts_layout1__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../layouts/layout1 */ "./src/layouts/layout1.js");
-/* harmony import */ var _const_routes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../const/routes */ "./src/const/routes.js");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! antd */ "antd");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _services_myService__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../services/myService */ "./src/services/myService.js");
-/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "@fortawesome/react-fontawesome");
-/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "@fortawesome/free-solid-svg-icons");
-/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _data_data__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../data/data */ "./src/data/data.js");
-/* harmony import */ var _components_categoryComp__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../components/categoryComp */ "./src/components/categoryComp.js");
-/* harmony import */ var _components_productComp__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../components/productComp */ "./src/components/productComp.js");
-/* harmony import */ var _hoc_newComponent__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../hoc/newComponent */ "./src/hoc/newComponent.jsx");
-/* harmony import */ var _const_const__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../const/const */ "./src/const/const.js");
-/* harmony import */ var _const_const__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_const_const__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _components_SharedComp_LoadingPage__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../components/SharedComp/LoadingPage */ "./src/components/SharedComp/LoadingPage.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _layouts_layout1__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../layouts/layout1 */ "./src/layouts/layout1.js");
+/* harmony import */ var _const_routes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../const/routes */ "./src/const/routes.js");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! antd */ "antd");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _services_myService__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../services/myService */ "./src/services/myService.js");
+/* harmony import */ var _data_data__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../data/data */ "./src/data/data.js");
+/* harmony import */ var _components_ProductPage_categoryComp__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/ProductPage/categoryComp */ "./src/components/ProductPage/categoryComp.js");
+/* harmony import */ var _components_ProductPage_productComp__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../components/ProductPage/productComp */ "./src/components/ProductPage/productComp.js");
+/* harmony import */ var _components_SharedComp_LoadingPage__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../components/SharedComp/LoadingPage */ "./src/components/SharedComp/LoadingPage.js");
 var _jsxFileName = "/Volumes/Data/House/src/pages/products/[slug].js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-// import "jquery";
-
-
-
 
 
 
@@ -3690,53 +4311,78 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-
-
 async function getStaticPaths() {
-  const paths = _data_data__WEBPACK_IMPORTED_MODULE_11__["dataCategories"].map(data => `/products/${data.slug}`);
+  const paths = _data_data__WEBPACK_IMPORTED_MODULE_7__["dataCategories"].map(data => `${_const_routes__WEBPACK_IMPORTED_MODULE_3__["default"].Products.href}/${data.slug}`);
+  const paths2 = _data_data__WEBPACK_IMPORTED_MODULE_7__["dataProducts"].map(data => `${_const_routes__WEBPACK_IMPORTED_MODULE_3__["default"].Products.href}/${data.slug}~${data.id}`);
   return {
-    paths,
+    paths: [...paths, ...paths2],
     fallback: false
   };
 }
 async function getStaticProps({
   params
 }) {
-  let product, productsChild, productsChild_2;
-  let arrChild_1 = [];
-  let data = await getData();
+  let breadcrumb = '',
+      product = '',
+      categoriesChild = '',
+      categoriesChild_2 = '',
+      productsChild = '',
+      arrChild_1 = [],
+      productDetail = '';
+  let dataCate = await getData(_data_data__WEBPACK_IMPORTED_MODULE_7__["dataCategories"], 400);
   const arrStr = params.slug.split("~");
   let typeComp = arrStr.length === 1 ? 0 : 1; // 0 CategoryComp, 1 ProductComp
 
   if (typeComp === 0) {
-    product = _services_myService__WEBPACK_IMPORTED_MODULE_8__["FuncService"].search(data, "slug", arrStr[0]); // Danh muc hien tai (F1)
+    // Danh muc hien tai (F1)
+    product = _services_myService__WEBPACK_IMPORTED_MODULE_6__["FuncService"].search(dataCate, "slug", arrStr[0]);
+    breadcrumb = _services_myService__WEBPACK_IMPORTED_MODULE_6__["FuncService"].searchAll(dataCate, "id", product.breadcrumb); // Danh Muc hien tai co danh sach san pham
 
-    productsChild = _services_myService__WEBPACK_IMPORTED_MODULE_8__["FuncService"].find(data, product.children, 'id'); // Danh sach con cua danh muc hien tai (F2)
+    if (product.typeShow === 3) {
+      let dataPro = await getData(_data_data__WEBPACK_IMPORTED_MODULE_7__["dataProducts"], 1);
+      productsChild = _services_myService__WEBPACK_IMPORTED_MODULE_6__["FuncService"].find(dataPro, product.children, 'id');
+    } // Danh Muc hien tai ko co danh sach san pham, chi co danh muc con
 
-    productsChild.map((res, i) => res.children.length > 0 ? arrChild_1 = [...arrChild_1, ...res.children] : null); // lay tat ca con cua danh sach con cua danh muc hien tai (F3)
 
-    productsChild_2 = _services_myService__WEBPACK_IMPORTED_MODULE_8__["FuncService"].find(data, arrChild_1, 'id'); // lay tat ca con cua danh sach con cua danh muc hien tai (F3)
+    if (product.typeShow !== 3) {
+      // // Danh sach con cua danh muc hien tai (F2)
+      categoriesChild = product.children.length > 0 ? _services_myService__WEBPACK_IMPORTED_MODULE_6__["FuncService"].find(dataCate, product.children, 'id') : [];
+    }
+
+    if (product.typeShow === 0) {
+      // // lay tat ca con cua danh sach con cua danh muc hien tai (F3)
+      categoriesChild.length > 0 ? categoriesChild.map((res, i) => res.children.length > 0 ? arrChild_1 = [...arrChild_1, ...res.children] : null) : null;
+      arrChild_1 = _services_myService__WEBPACK_IMPORTED_MODULE_6__["MyService"].dedup(arrChild_1);
+      categoriesChild_2 = _services_myService__WEBPACK_IMPORTED_MODULE_6__["FuncService"].find(dataCate, arrChild_1, 'id');
+    }
   }
 
-  if (typeComp === 1) {}
+  if (typeComp === 1) {
+    let dataPro = await getData(_data_data__WEBPACK_IMPORTED_MODULE_7__["dataProducts"], 1);
+    productDetail = _services_myService__WEBPACK_IMPORTED_MODULE_6__["FuncService"].search(dataPro, 'id', arrStr[1]);
+    product = _services_myService__WEBPACK_IMPORTED_MODULE_6__["FuncService"].search(dataCate, 'id', productDetail.idParent);
+    breadcrumb = _services_myService__WEBPACK_IMPORTED_MODULE_6__["FuncService"].searchAll(dataCate, 'id', product.breadcrumb);
+  }
 
-  console.log("ssr");
   return {
     props: {
       typeComp,
+      breadcrumb,
       product,
       productsChild,
-      productsChild_2,
+      categoriesChild,
+      categoriesChild_2,
+      productDetail,
       loading: false
     }
   };
 }
 
-const getData = () => {
+const getData = (data, delay) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve(_data_data__WEBPACK_IMPORTED_MODULE_11__["dataCategories"]);
-    }, 500);
+      resolve(data);
+    }, delay);
   });
 };
 
@@ -3748,40 +4394,90 @@ class ProductsPosition extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       loading: this.props.loading
     });
 
-    _defineProperty(this, "listBreadcrum", [{
-      name: "All Products",
-      href: _const_routes__WEBPACK_IMPORTED_MODULE_5__["default"].Products.href,
-      as: ""
-    }, {
-      name: _services_myService__WEBPACK_IMPORTED_MODULE_8__["MyService"].parseSeoToName(this.props.router.query[Object.keys(this.props.router.query)[0]]),
-      href: this.props.router.pathname,
-      as: this.props.router.asPath
-    }]);
-
     _defineProperty(this, "renderBreadcrumb", () => {
-      let slug = this.props.router.query[_const_routes__WEBPACK_IMPORTED_MODULE_5__["default"].slug.replace("[", "").replace("]", "")];
-      let objCur = _services_myService__WEBPACK_IMPORTED_MODULE_8__["FuncService"].search(_data_data__WEBPACK_IMPORTED_MODULE_11__["dataCategories"], 'slug', slug);
-      return this.listBreadcrum.map((item, i) => {
-        return __jsx(antd__WEBPACK_IMPORTED_MODULE_6__["Breadcrumb"].Item, {
+      const {
+        typeComp,
+        product,
+        productDetail,
+        breadcrumb
+      } = this.props;
+      let listBreadcrum = [{
+        name: "All Products",
+        href: _const_routes__WEBPACK_IMPORTED_MODULE_3__["default"].Products.href,
+        as: ""
+      }];
+
+      if (typeComp === 0) {
+        if (breadcrumb.length > 0) {
+          for (let res of breadcrumb) {
+            listBreadcrum = [...listBreadcrum, {
+              name: res.name,
+              href: _const_routes__WEBPACK_IMPORTED_MODULE_3__["default"].ProductDetail.href,
+              as: _const_routes__WEBPACK_IMPORTED_MODULE_3__["default"].ProductDetail.as(res.slug)
+            }];
+          }
+        }
+
+        listBreadcrum = [...listBreadcrum, {
+          name: product.name,
+          href: this.props.router.pathname,
+          as: this.props.router.asPath
+        }];
+      }
+
+      if (typeComp === 1) {
+        // console.log("product: ",product)
+        // console.log("productDetail: ",productDetail)
+        for (let res of breadcrumb) {
+          listBreadcrum = [...listBreadcrum, {
+            name: res.name,
+            href: _const_routes__WEBPACK_IMPORTED_MODULE_3__["default"].ProductDetail.href,
+            as: _const_routes__WEBPACK_IMPORTED_MODULE_3__["default"].ProductDetail.as(res.slug)
+          }];
+        }
+
+        listBreadcrum = [...listBreadcrum, {
+          name: product.name,
+          href: _const_routes__WEBPACK_IMPORTED_MODULE_3__["default"].ProductDetail.href,
+          as: _const_routes__WEBPACK_IMPORTED_MODULE_3__["default"].ProductDetail.as(product.slug)
+        }, {
+          name: `MPN ${productDetail.id}`,
+          href: _const_routes__WEBPACK_IMPORTED_MODULE_3__["default"].ProductsList.href,
+          as: _const_routes__WEBPACK_IMPORTED_MODULE_3__["default"].ProductsList.as(productDetail.slug, productDetail.id)
+        }];
+      }
+
+      return listBreadcrum.map((item, i) => {
+        return __jsx(antd__WEBPACK_IMPORTED_MODULE_4__["Breadcrumb"].Item, {
           key: i,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 112
+            lineNumber: 157
           },
           __self: this
-        }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
+        }, i + 1 === listBreadcrum.length ? __jsx("span", {
+          className: "fs-15",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 160
+          },
+          __self: this
+        }, item.name) : __jsx(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
           href: item.href,
           as: item.as,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 113
+            lineNumber: 161
           },
           __self: this
         }, __jsx("span", {
           className: "mylink fs-15",
+          onClick: () => this.setState({
+            loading: true
+          }),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 114
+            lineNumber: 162
           },
           __self: this
         }, item.name)));
@@ -3789,41 +4485,45 @@ class ProductsPosition extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     });
   }
 
-  // componentWillReceiveProps(nextProps) {
-  //   console.log(nextProps)
-  //   if(nextProps.loading !== this.state.loading) {
-  //     this.setState({loading: this.props.loading});
-  //   }
-  // }
-  static getDerivedStateFromProps(nextProps, prevState) {
-    if (nextProps.loading !== prevState.loading) {
-      return {
-        loading: prevState.loading
-      };
-    }
-
-    return null;
+  static getDerivedStateFromProps(props, state) {
+    return {
+      loading: state.loading
+    };
   }
 
-  componentDidUpdate(prevProps, prevState, snapshot) {
-    if (this.state.loading === prevState.loading) {
+  componentDidUpdate(prevProps, prevState) {
+    this.state.loading === true && prevState.loading === this.state.loading ? this.setState({
+      loading: this.props.loading
+    }) : null;
+  }
+
+  componentDidMount() {
+    // back browser
+    window.onpopstate = () => {
       this.setState({
-        loading: !this.state.loading
+        loading: true
       });
-    }
+    };
+  }
+
+  componentWillUnmount() {
+    window.onpopstate = null;
   }
 
   render() {
     const {
       typeComp,
       product,
+      categoriesChild,
+      categoriesChild_2,
       productsChild,
-      productsChild_2
+      productDetail
     } = this.props;
-    const renderComp = typeComp === 0 ? __jsx(_components_categoryComp__WEBPACK_IMPORTED_MODULE_12__["default"], {
+    const renderComp = typeComp === 0 ? __jsx(_components_ProductPage_categoryComp__WEBPACK_IMPORTED_MODULE_8__["default"], {
       product: product,
       productsChild: productsChild,
-      productsChild_2: productsChild_2,
+      categoriesChild: categoriesChild,
+      categoriesChild_2: categoriesChild_2,
       callback: res => {
         this.setState({
           loading: true
@@ -3831,12 +4531,11 @@ class ProductsPosition extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 124
+        lineNumber: 177
       },
       __self: this
-    }) : __jsx(_components_productComp__WEBPACK_IMPORTED_MODULE_13__["default"], {
-      product: product,
-      productsChild: productsChild,
+    }) : __jsx(_components_ProductPage_productComp__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      productDetail: productDetail,
       callback: res => {
         this.setState({
           loading: true
@@ -3844,63 +4543,63 @@ class ProductsPosition extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 127
+        lineNumber: 180
       },
       __self: this
-    }); // console.log("product: ",product);
-    // console.log("productsChild: ",productsChild)
-    // console.log("productsChild_2: ",productsChild_2)
-
-    return __jsx(_layouts_layout1__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    });
+    return __jsx(_layouts_layout1__WEBPACK_IMPORTED_MODULE_2__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 137
+        lineNumber: 185
       },
       __self: this
-    }, __jsx(_components_SharedComp_LoadingPage__WEBPACK_IMPORTED_MODULE_16__["default"], {
+    }, __jsx(_components_SharedComp_LoadingPage__WEBPACK_IMPORTED_MODULE_10__["default"], {
       isLoading: this.state.loading,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 138
+        lineNumber: 186
+      },
+      __self: this
+    }, __jsx("div", {
+      id: "Products",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 187
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "wrapper",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 188
       },
       __self: this
     }, __jsx("div", {
       className: "container",
-      id: "productPosition",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 139
+        lineNumber: 189
       },
       __self: this
-    }, __jsx(antd__WEBPACK_IMPORTED_MODULE_6__["Breadcrumb"], {
+    }, __jsx(antd__WEBPACK_IMPORTED_MODULE_4__["Breadcrumb"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 140
+        lineNumber: 190
       },
       __self: this
-    }, this.renderBreadcrumb()), __jsx("h1", {
+    }, this.renderBreadcrumb()), typeComp === 0 ? __jsx("h1", {
+      className: "pb-25",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 141
+        lineNumber: 192
       },
       __self: this
-    }, _services_myService__WEBPACK_IMPORTED_MODULE_8__["MyService"].parseSeoToName(this.props.router.query[Object.keys(this.props.router.query)[0]])), renderComp)));
+    }, product.name) : null)), renderComp)));
   }
 
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(next_router__WEBPACK_IMPORTED_MODULE_3__["withRouter"])(ProductsPosition));
-
-/***/ }),
-
-/***/ "./src/scss/pages/[slug].scss":
-/*!************************************!*\
-  !*** ./src/scss/pages/[slug].scss ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
+/* harmony default export */ __webpack_exports__["default"] = (Object(next_router__WEBPACK_IMPORTED_MODULE_1__["withRouter"])(ProductsPosition));
 
 /***/ }),
 
@@ -4176,6 +4875,26 @@ class FuncService {
   */
   static search(arr, prop, string) {
     return arr.find(res => res[prop] === string);
+  }
+
+  static searchAll(arr, prop, arrFind) {
+    let resArr = [];
+
+    if (arrFind.length > 0) {
+      let myMap = new Map();
+
+      for (let res of arr) {
+        myMap.set(res[prop], res);
+      }
+
+      for (let res of arrFind) {
+        resArr = [...resArr, myMap.get(res)];
+      }
+
+      return resArr;
+    }
+
+    return resArr;
   } // tim tat ca item theo danh sach id
 
   /*
@@ -4201,14 +4920,14 @@ class FuncService {
       return newArr;
     }
 
-    return null;
+    return [];
   }
 
 }
 
 /***/ }),
 
-/***/ 3:
+/***/ 7:
 /*!********************************************!*\
   !*** multi ./src/pages/products/[slug].js ***!
   \********************************************/
@@ -4217,6 +4936,17 @@ class FuncService {
 
 module.exports = __webpack_require__(/*! /Volumes/Data/House/src/pages/products/[slug].js */"./src/pages/products/[slug].js");
 
+
+/***/ }),
+
+/***/ "@ant-design/icons":
+/*!************************************!*\
+  !*** external "@ant-design/icons" ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@ant-design/icons");
 
 /***/ }),
 

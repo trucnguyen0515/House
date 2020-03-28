@@ -298,6 +298,20 @@ export class FuncService {
   static search(arr,prop,string){
     return arr.find(res => res[prop] === string)
   }
+  static searchAll(arr,prop,arrFind){
+    let resArr = [];
+    if(arrFind.length > 0){
+      let myMap = new Map();
+      for(let res of arr){
+        myMap.set(res[prop],res);
+      }
+      for(let res of arrFind){
+        resArr = [...resArr,myMap.get(res)]
+      }
+      return resArr
+    }
+    return resArr;
+  }
   // tim tat ca item theo danh sach id
   /*
       arr: input arrObj dau vao
@@ -316,7 +330,7 @@ export class FuncService {
       }
       return newArr;
     }
-    return null
+    return []
   }
 }
 

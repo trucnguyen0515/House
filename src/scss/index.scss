@@ -1,0 +1,26 @@
+@import './abstracts/variable';
+@import './abstracts/initial';
+@import './abstracts/minxin';
+@import './abstracts/extend';
+
+//libs
+@import './libs/ant';
+
+// Layouts
+@import './layouts/header';
+@import './layouts/megamenu';
+
+// Components
+@import './components/button';
+@import './components/loadingPage';
+
+// Pages
+@import './pages/[slugProduct]';
+@import './pages/[slugPhoto]';
+@import './pages/index';
+@import './pages/products';
+@import './pages/photos';
+@import './pages/proUser';
+
+
+

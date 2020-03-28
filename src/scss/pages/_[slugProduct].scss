@@ -1,0 +1,81 @@
+
+
+
+#Products{
+    .itemImage{
+        position: relative;
+        .imgItem:hover + .title{
+            text-decoration: underline;
+        }
+    }
+    .title{
+        position: absolute;
+        top:15px;
+        left:15px;
+    }
+    .cateComp{
+        box-shadow: 0 2px 4px 1px rgba(0,0,0,.12);
+        transition: box-shadow 0.3s;
+        cursor: pointer;
+        margin-bottom:20px;
+        .titleChild{
+            border-top: 1px solid $borderColor;
+            font-size: 14px;
+        }
+        &:hover{
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,.24);
+        }
+    }
+    .wrapper{
+        background:white;
+        box-shadow: 0 1px 3px 0 rgba(0,0,0,.08);
+    }
+
+    .productsList{
+        .container{
+            background-color: none;
+            background: white;
+        }
+        img{
+            width:100%;
+        }
+        .productItems{
+            padding: 20px;
+            background:white;
+            cursor: pointer;
+            position: relative;
+        }
+        .info{
+            padding: 0 20px;
+            .name{
+                font-size: 1rem;
+            }
+            .price{
+                font-weight: 600;
+                letter-spacing: 0.5px;
+                font-size: 1.3rem;
+            }
+            
+        }
+        .sale{
+            position: absolute;
+            top: 37px;
+            left: 32px;
+            text-transform: uppercase;
+            background: white;
+            border: 1px solid $primaryColor;
+            color:$primaryColor;
+            padding: 4px 8px;
+            font-weight: 500;
+            font-size: 70%;
+        }
+    }
+    .sale2{
+        text-transform: uppercase;
+        background: $primaryColor;
+        color:white;
+        padding: 4px 8px;
+        font-weight: 500;
+        font-size: 70%;
+    }
+}

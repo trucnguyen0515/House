@@ -1,0 +1,46 @@
+
+
+
+#indexProduct {
+    padding-bottom: 20px;
+    .categories{
+        overflow-y: auto;
+        height: 100%;
+        h3{
+            position: relative;
+        
+            &::before{
+                position: absolute;
+                content: '';
+                width: 150px;
+                height: 1px;
+                background-color: $borderColor;
+                top: 30px;
+                left:0px;
+            }
+        }
+    }
+    .product{
+        position: relative;
+    }
+    img{
+        width:100%;
+        height: 200px;
+        cursor: pointer;
+    }
+    img:hover + .title{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .img img{
+        width:100%;
+        height:250px;
+    }
+    .title{
+        position: absolute;
+        top:15px;
+        left:15px;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+}

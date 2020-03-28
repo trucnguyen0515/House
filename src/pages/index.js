@@ -2,8 +2,6 @@
 
 
 // import 'jquery';
-import "antd/dist/antd.css";
-import "../scss/pages/index.scss";
 
 import React, { Component, Fragment } from "react";
 import CarouselComp from "../components/IndexPage/Carousel";
@@ -22,7 +20,7 @@ export default class IndexPage extends Component {
     render() {
         return (
              <Layout1>
-                 <div id="indexPage">
+                 <div id="indexPage" style={{background:'white'}}>
                     <CarouselComp/>
                     <div className="container pt-10 pb-40">
                         <Introduce/>

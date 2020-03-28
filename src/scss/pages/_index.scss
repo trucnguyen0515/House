@@ -1,0 +1,77 @@
+
+
+
+
+#indexPage{
+        background: $bgColor;
+}
+
+#MyCarousel{
+    position: relative;
+    .img{
+        height:450px;
+        width: 100%;
+        overflow:hidden                    
+    }
+    img{
+        width:100%;
+    }
+    .intro{
+        position: absolute;
+        width: 100%;
+        z-index: 100;
+        top:50%;
+        transform: translateY(-50%);
+        color:white;
+        h1{
+            color:white;
+            font-weight: 500;
+            font-size: 48px;
+            margin-bottom:0;
+        }
+        p{
+            font-size: 24px;
+            font-weight: 300;
+        }
+    }
+}
+
+
+.hbs *,.hbs *:before,.hbs *:after{background:transparent!important;color:#000!important;box-shadow:none!important;text-shadow:none!important;}
+.hbs *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+.hbs *:before,.hbs *:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+::selection{background:#2d9b00;color:#fff;}
+::-moz-selection{background:#2d9b00;color:#fff;}
+.hzi-font{font-family:'Houzz-Glyphs'!important;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:inline-block;*display:inline;zoom:1;vertical-align:middle;font-size:1.5em;}
+.hp-visitor-block .hp-visitor-block-item__icon{width:104px;height:75px;font-size:104px;color:#888;}
+@font-face{font-family:'Houzz-Glyphs';src:url('https://st.hzcdn.com/res/4166/pic/fonts/Houzz-Glyphs.eot?NOQWAC');src:url('https://st.hzcdn.com/res/4166/pic/fonts/Houzz-Glyphs.eot#iefixNOQWAC') format('embedded-opentype'), url('https://st.hzcdn.com/res/4166/pic/fonts/Houzz-Glyphs.woff2?NOQWAC') format('woff2'), url('https://st.hzcdn.com/res/4166/pic/fonts/Houzz-Glyphs.woff?NOQWAC') format('woff'), url('https://st.hzcdn.com/res/4166/pic/fonts/Houzz-Glyphs.ttf?NOQWAC') format('truetype'), url('https://st.hzcdn.com/res/4166/pic/fonts/Houzz-Glyphs.svg?NOQWAC#Houzz-Glyphs') format('svg');font-weight:normal;font-style:normal;}
+
+.hzi-Findideas:before{content:"\e95b";}
+.hzi-FindPros:before{content:"\e95d";}
+.hzi-FindProducts:before{content:"\e95c";}
+
+
+#Introduce{
+    h1{
+        font-size: 30px;
+        font-weight: 300;
+        text-align: center;
+        margin: 16px 0;
+        line-height: 1.2;
+    }
+    h2{
+        margin-bottom:5px;
+        margin-top:-10px;
+        font-size: 20px;
+        font-weight: 400;
+    }
+    .hzi-font{
+        font-size: 100px;
+        color: #888
+    }
+    .des{
+        font-size: 15px;
+        font-weight: 300;
+    }
+}
+

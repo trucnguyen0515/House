@@ -1,6 +1,7 @@
 import Document, {Html,Main,Head,NextScript} from 'next/document';
 import MyHead from "next/head";
 
+
 class MyDocument extends Document {
     render(){
         return (

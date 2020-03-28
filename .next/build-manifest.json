@@ -8,14 +8,10 @@
     "static/development/_ssgManifest.js"
   ],
   "pages": {
-    "/": [
+    "/_app": [
       "static/runtime/webpack.js",
       "static/css/styles.chunk.css",
       "static/chunks/styles.js",
-      "static/runtime/main.js"
-    ],
-    "/_app": [
-      "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
     "/_error": [
@@ -26,16 +22,24 @@
       "static/runtime/polyfills.js",
       "static/runtime/polyfills.js.map"
     ],
-    "/index": [
+    "/photos": [
       "static/runtime/webpack.js",
-      "static/css/styles.chunk.css",
-      "static/chunks/styles.js",
+      "static/runtime/main.js"
+    ],
+    "/photos/[slug]": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/pro/[name]": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/products": [
+      "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
     "/products/[slug]": [
       "static/runtime/webpack.js",
-      "static/css/styles.chunk.css",
-      "static/chunks/styles.js",
       "static/runtime/main.js"
     ]
   }

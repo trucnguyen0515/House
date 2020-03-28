@@ -1,8 +1,6 @@
 
 
 // import "jquery";
-import "antd/dist/antd.css";
-import "../../scss/pages/products.scss";
 
 
 import { Component } from "react";
@@ -10,7 +8,7 @@ import { Row, Col, Carousel } from "antd";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import { dataCategory, dataCategories } from "../../data/data";
+import { dataCategories } from "../../data/data";
 
 import MyRouter from "../../const/routes";
 
@@ -20,6 +18,7 @@ import LoadingPage from "../../components/SharedComp/LoadingPage";
 
 
 class ProductPage extends Component {
+
   state = {
     loading: false
   };
@@ -82,7 +81,7 @@ class ProductPage extends Component {
     return dataCategories.map((res, i) => {
       if (res.parent.length === 0) {
         return (
-          <Col span={8} key={i}>
+          <Col span={8} key={i} className="mt-30">
             <div className="product">
               <Link
                 href={MyRouter.ProductDetail.href}
@@ -117,7 +116,7 @@ class ProductPage extends Component {
     return (
       <Layout1>
         <LoadingPage isLoading={this.state.loading}>
-          <div id="indexProduct">
+          <div id="indexProduct" style={{background:'white'}}>
             <div className="container">
               <Row>
                 <Col span={6} style={{ marginTop: "20px" }}>

@@ -5,8 +5,9 @@ const Footer = () => {
       style={{
         height: "60px",
         width: "100%",
-        borderTop: "1px solid #e6e6e6",
-        display:'flex'
+        borderTop: "1px solid rgba(230, 230, 230, 0.64)",
+        display:'flex',
+        background:'white'
       }}
     >
       <div className="container" style={{display:'flex'}}>
