@@ -1,9 +1,9 @@
-Step 1: npm run i 
-Step 2: npm run dev
-Step 3: localhost:3000
+Step 1: npm run i  <br/>
+Step 2: npm run dev <br/>
+Step 3: localhost:3000 <br/>
 
-Page:
-  Home:       localhost:3000
-  Products:   localhost:3000/products
-  Photos:     localhost:3000/photos
-  Profile:    localhost:3000/pro/a
+Page: <br/>
+  Home:       localhost:3000 <br/>
+  Products:   localhost:3000/products <br/>
+  Photos:     localhost:3000/photos <br/>
+  Profile:    localhost:3000/pro/a 
