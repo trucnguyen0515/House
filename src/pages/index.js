@@ -12,6 +12,10 @@ import Link from "next/link";
 import Introduce from "../components/IndexPage/Introduce";
 import MyRouter from "../const/routes";
 
+import "antd/dist/antd.css";
+import '../scss/index.scss'
+
+
 export async function getStaticProps({ params }) {
     return {props:{a:'ok'}}
 }

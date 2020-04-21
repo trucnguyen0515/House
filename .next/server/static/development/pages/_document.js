@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1062,7 +1062,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_document__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/head */ "next/head");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Volumes/Data/Project_Mine/DesignHouse/P_House/src/pages/_document.js";
+var _jsxFileName = "/Volumes/Data/Project_Mine/KoChayDc/P_House/src/pages/_document.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -1073,25 +1073,25 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
     return __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Html"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 8
+        lineNumber: 10
       },
       __self: this
     }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Head"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 12
+        lineNumber: 14
       },
       __self: this
     }), __jsx(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 17
+        lineNumber: 19
       },
       __self: this
     }, __jsx("title", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 18
+        lineNumber: 20
       },
       __self: this
     }, "House"), __jsx("style", {
@@ -1099,25 +1099,25 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
       href: "https://st.hzcdn.com/res/4166/css/style?f=webfonts,houzz-bootstrap,houzzTheme,iconfont,iconGlyphs,houzz-responsive-1425px,ui,ui_wk",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20
+        lineNumber: 22
       },
       __self: this
     })), __jsx("body", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 23
+        lineNumber: 25
       },
       __self: this
     }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Main"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 24
+        lineNumber: 26
       },
       __self: this
     }), __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["NextScript"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25
+        lineNumber: 27
       },
       __self: this
     })));
@@ -1129,7 +1129,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
 
 /***/ }),
 
-/***/ 1:
+/***/ 0:
 /*!*********************************************!*\
   !*** multi private-next-pages/_document.js ***!
   \*********************************************/

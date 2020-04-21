@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -199,6 +199,17 @@ function _typeof(obj) {
 }
 
 module.exports = _typeof;
+
+/***/ }),
+
+/***/ "./node_modules/antd/dist/antd.css":
+/*!*****************************************!*\
+  !*** ./node_modules/antd/dist/antd.css ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
 
 /***/ }),
 
@@ -1815,7 +1826,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd */ "antd");
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Volumes/Data/Project_Mine/DesignHouse/P_House/src/components/IndexPage/Carousel.js";
+var _jsxFileName = "/Volumes/Data/Project_Mine/KoChayDc/P_House/src/components/IndexPage/Carousel.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -1926,7 +1937,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd */ "antd");
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Volumes/Data/Project_Mine/DesignHouse/P_House/src/components/IndexPage/Introduce.js";
+var _jsxFileName = "/Volumes/Data/Project_Mine/KoChayDc/P_House/src/components/IndexPage/Introduce.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -2139,7 +2150,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _layout1Comp_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./layout1Comp/Header */ "./src/layouts/layout1Comp/Header.js");
 /* harmony import */ var _layout1Comp_MegaMenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./layout1Comp/MegaMenu */ "./src/layouts/layout1Comp/MegaMenu.js");
 /* harmony import */ var _layout1Comp_Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./layout1Comp/Footer */ "./src/layouts/layout1Comp/Footer.js");
-var _jsxFileName = "/Volumes/Data/Project_Mine/DesignHouse/P_House/src/layouts/layout1.js";
+var _jsxFileName = "/Volumes/Data/Project_Mine/KoChayDc/P_House/src/layouts/layout1.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -2190,7 +2201,7 @@ const Layout1 = props => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Volumes/Data/Project_Mine/DesignHouse/P_House/src/layouts/layout1Comp/Footer.js";
+var _jsxFileName = "/Volumes/Data/Project_Mine/KoChayDc/P_House/src/layouts/layout1Comp/Footer.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -2376,7 +2387,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _const_routes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../const/routes */ "./src/const/routes.js");
-var _jsxFileName = "/Volumes/Data/Project_Mine/DesignHouse/P_House/src/layouts/layout1Comp/Header.js";
+var _jsxFileName = "/Volumes/Data/Project_Mine/KoChayDc/P_House/src/layouts/layout1Comp/Header.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 // import '../scss/layouts/header.scss'
@@ -2596,7 +2607,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _const_routes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../const/routes */ "./src/const/routes.js");
-var _jsxFileName = "/Volumes/Data/Project_Mine/DesignHouse/P_House/src/layouts/layout1Comp/MegaMenu.js";
+var _jsxFileName = "/Volumes/Data/Project_Mine/KoChayDc/P_House/src/layouts/layout1Comp/MegaMenu.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement;
 
 
@@ -3166,9 +3177,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _components_IndexPage_Introduce__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/IndexPage/Introduce */ "./src/components/IndexPage/Introduce.js");
 /* harmony import */ var _const_routes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../const/routes */ "./src/const/routes.js");
-var _jsxFileName = "/Volumes/Data/Project_Mine/DesignHouse/P_House/src/pages/index.js";
+/* harmony import */ var antd_dist_antd_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! antd/dist/antd.css */ "./node_modules/antd/dist/antd.css");
+/* harmony import */ var antd_dist_antd_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(antd_dist_antd_css__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _scss_index_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../scss/index.scss */ "./src/scss/index.scss");
+/* harmony import */ var _scss_index_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_scss_index_scss__WEBPACK_IMPORTED_MODULE_7__);
+var _jsxFileName = "/Volumes/Data/Project_Mine/KoChayDc/P_House/src/pages/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 // import 'jquery';
+
+
 
 
 
@@ -3189,7 +3206,7 @@ class IndexPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     return __jsx(_layouts_layout1__WEBPACK_IMPORTED_MODULE_2__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 22
+        lineNumber: 26
       },
       __self: this
     }, __jsx("div", {
@@ -3199,47 +3216,47 @@ class IndexPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 23
+        lineNumber: 27
       },
       __self: this
     }, __jsx(_components_IndexPage_Carousel__WEBPACK_IMPORTED_MODULE_1__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 24
+        lineNumber: 28
       },
       __self: this
     }), __jsx("div", {
       className: "container pt-10 pb-40",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25
+        lineNumber: 29
       },
       __self: this
     }, __jsx(_components_IndexPage_Introduce__WEBPACK_IMPORTED_MODULE_4__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 26
+        lineNumber: 30
       },
       __self: this
     }), __jsx("div", {
       className: "text-center mt-50",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 27
+        lineNumber: 31
       },
       __self: this
     }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
       href: _const_routes__WEBPACK_IMPORTED_MODULE_5__["default"].Products.href,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 28
+        lineNumber: 32
       },
       __self: this
     }, __jsx("button", {
       className: "my-btn",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 29
+        lineNumber: 33
       },
       __self: this
     }, "Get Started"))))));
@@ -3249,14 +3266,25 @@ class IndexPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 /***/ }),
 
-/***/ 5:
+/***/ "./src/scss/index.scss":
+/*!*****************************!*\
+  !*** ./src/scss/index.scss ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ 3:
 /*!**********************************!*\
   !*** multi ./src/pages/index.js ***!
   \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Volumes/Data/Project_Mine/DesignHouse/P_House/src/pages/index.js */"./src/pages/index.js");
+module.exports = __webpack_require__(/*! /Volumes/Data/Project_Mine/KoChayDc/P_House/src/pages/index.js */"./src/pages/index.js");
 
 
 /***/ }),
