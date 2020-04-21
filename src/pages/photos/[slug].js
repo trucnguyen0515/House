@@ -68,7 +68,7 @@ export async function getStaticProps({ params }) {
 
 class PhotoCategory extends Component {
     render() {
-        console.log(this.props)
+        console.log("cc: ",this.props)
         return (
             <Layout1>
                 <div id="PhotoCategory" style={{ background: 'white' }}>

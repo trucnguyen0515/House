@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1815,7 +1815,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd */ "antd");
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Volumes/Data/House/src/components/SharedComp/LoadingPage.js";
+var _jsxFileName = "/Volumes/Data/Project_Mine/DesignHouse/P_House/src/components/SharedComp/LoadingPage.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -2255,12 +2255,14 @@ const dataProductPhotos = [{
   id: '2',
   name: 'Hamstons Summer Home',
   slug: 'hamstons-summer-home',
-  url: 'PhotoProduct2.jpg'
+  url: 'PhotoProduct2.jpg',
+  images: ["PhotoProduct2.jpg", "PhotoProduct3.jpg", "PhotoProduct2.jpg", "PhotoProduct1.jpg"]
 }, {
   id: '3',
   name: 'Marietta Modern Farmhouse',
   slug: 'marietta-modern-farmhouse',
-  url: 'PhotoProduct3.jpg'
+  url: 'PhotoProduct3.jpg',
+  images: ["PhotoProduct2.jpg", "PhotoProduct3.jpg", "PhotoProduct2.jpg", "PhotoProduct1.jpg"]
 }];
 
 /***/ }),
@@ -2279,7 +2281,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _layout1Comp_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./layout1Comp/Header */ "./src/layouts/layout1Comp/Header.js");
 /* harmony import */ var _layout1Comp_MegaMenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./layout1Comp/MegaMenu */ "./src/layouts/layout1Comp/MegaMenu.js");
 /* harmony import */ var _layout1Comp_Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./layout1Comp/Footer */ "./src/layouts/layout1Comp/Footer.js");
-var _jsxFileName = "/Volumes/Data/House/src/layouts/layout1.js";
+var _jsxFileName = "/Volumes/Data/Project_Mine/DesignHouse/P_House/src/layouts/layout1.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -2330,7 +2332,7 @@ const Layout1 = props => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Volumes/Data/House/src/layouts/layout1Comp/Footer.js";
+var _jsxFileName = "/Volumes/Data/Project_Mine/DesignHouse/P_House/src/layouts/layout1Comp/Footer.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -2516,7 +2518,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _const_routes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../const/routes */ "./src/const/routes.js");
-var _jsxFileName = "/Volumes/Data/House/src/layouts/layout1Comp/Header.js";
+var _jsxFileName = "/Volumes/Data/Project_Mine/DesignHouse/P_House/src/layouts/layout1Comp/Header.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 // import '../scss/layouts/header.scss'
@@ -2736,7 +2738,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _const_routes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../const/routes */ "./src/const/routes.js");
-var _jsxFileName = "/Volumes/Data/House/src/layouts/layout1Comp/MegaMenu.js";
+var _jsxFileName = "/Volumes/Data/Project_Mine/DesignHouse/P_House/src/layouts/layout1Comp/MegaMenu.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement;
 
 
@@ -3310,7 +3312,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _const_routes__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../const/routes */ "./src/const/routes.js");
-var _jsxFileName = "/Volumes/Data/House/src/pages/photos/index.js";
+var _jsxFileName = "/Volumes/Data/Project_Mine/DesignHouse/P_House/src/pages/photos/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -3581,14 +3583,14 @@ class PhotoPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 /***/ }),
 
-/***/ 8:
+/***/ 3:
 /*!*****************************************!*\
   !*** multi ./src/pages/photos/index.js ***!
   \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Volumes/Data/House/src/pages/photos/index.js */"./src/pages/photos/index.js");
+module.exports = __webpack_require__(/*! /Volumes/Data/Project_Mine/DesignHouse/P_House/src/pages/photos/index.js */"./src/pages/photos/index.js");
 
 
 /***/ }),

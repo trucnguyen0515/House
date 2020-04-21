@@ -384,12 +384,14 @@ export const dataProductPhotos = [
         id:'2',
         name:'Hamstons Summer Home',
         slug:'hamstons-summer-home',
-        url:'PhotoProduct2.jpg'
+        url:'PhotoProduct2.jpg',
+        images: ["PhotoProduct2.jpg","PhotoProduct3.jpg","PhotoProduct2.jpg","PhotoProduct1.jpg"]
     },
     {
         id:'3',
         name:'Marietta Modern Farmhouse',
         slug:'marietta-modern-farmhouse',
-        url:'PhotoProduct3.jpg'
+        url:'PhotoProduct3.jpg',
+        images: ["PhotoProduct2.jpg","PhotoProduct3.jpg","PhotoProduct2.jpg","PhotoProduct1.jpg"]
     },
 ]
