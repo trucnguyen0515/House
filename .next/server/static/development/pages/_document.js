@@ -1094,30 +1094,39 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
         lineNumber: 20
       },
       __self: this
-    }, "House"), __jsx("style", {
-      rel: "stylesheet",
-      href: "https://st.hzcdn.com/res/4166/css/style?f=webfonts,houzz-bootstrap,houzzTheme,iconfont,iconGlyphs,houzz-responsive-1425px,ui,ui_wk",
+    }, "House"), __jsx("link", {
+      rel: "icon",
+      type: "image/png",
+      href: "images/icon.png",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 22
       },
       __self: this
-    })), __jsx("body", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 25
-      },
-      __self: this
-    }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Main"], {
+    }), __jsx("style", {
+      rel: "stylesheet",
+      href: "https://st.hzcdn.com/res/4166/css/style?f=webfonts,houzz-bootstrap,houzzTheme,iconfont,iconGlyphs,houzz-responsive-1425px,ui,ui_wk",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 26
       },
       __self: this
+    })), __jsx("body", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 29
+      },
+      __self: this
+    }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Main"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 30
+      },
+      __self: this
     }), __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["NextScript"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 27
+        lineNumber: 31
       },
       __self: this
     })));
